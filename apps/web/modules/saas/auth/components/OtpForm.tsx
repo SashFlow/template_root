@@ -3,10 +3,8 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { authClient } from "@repo/auth/client";
 import { config } from "@repo/config";
-import { useAuthErrorMessages } from "@saas/auth/hooks/errors-messages";
-import { useRouter } from "@shared/hooks/router";
-import { Alert, AlertTitle } from "@ui/components/alert";
-import { Button } from "@ui/components/button";
+import { Alert, AlertTitle } from "@repo/ui/alert";
+import { Button } from "@repo/ui/button";
 import {
 	Form,
 	FormControl,
@@ -14,13 +12,15 @@ import {
 	FormItem,
 	FormLabel,
 	FormMessage,
-} from "@ui/components/form";
+} from "@repo/ui/form";
 import {
 	InputOTP,
 	InputOTPGroup,
 	InputOTPSeparator,
 	InputOTPSlot,
-} from "@ui/components/input-otp";
+} from "@repo/ui/input-otp";
+import { useAuthErrorMessages } from "@saas/auth/hooks/errors-messages";
+import { useRouter } from "@shared/hooks/router";
 import { AlertTriangleIcon, ArrowLeftIcon } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";

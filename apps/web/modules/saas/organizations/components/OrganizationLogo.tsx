@@ -1,7 +1,7 @@
 "use client";
 
 import { config } from "@repo/config";
-import { Avatar, AvatarFallback, AvatarImage } from "@ui/components/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@repo/ui/avatar";
 import BoringAvatar from "boring-avatars";
 import { useMemo } from "react";
 import { useIsClient } from "usehooks-ts";

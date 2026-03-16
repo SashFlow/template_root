@@ -1,11 +1,11 @@
 "use client";
 
+import heroImage from "@public/images/feature.svg";
 import { MobileIcon } from "@radix-ui/react-icons";
-import { cn } from "@ui/lib";
+import { cn } from "@repo/ui/utils";
 import { CloudIcon, ComputerIcon, StarIcon, WandIcon } from "lucide-react";
 import Image, { type StaticImageData } from "next/image";
 import type { JSXElementConstructor, ReactNode } from "react";
-import heroImage from "../../../../public/images/feature.svg";
 
 export const featureTabs: Array<{
 	id: string;

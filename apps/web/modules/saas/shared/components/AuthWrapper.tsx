@@ -1,9 +1,9 @@
 import { config } from "@repo/config";
+import { cn } from "@repo/ui/utils";
 import { Footer } from "@saas/shared/components/Footer";
 import { ColorModeToggle } from "@shared/components/ColorModeToggle";
 import { LocaleSwitch } from "@shared/components/LocaleSwitch";
 import { Logo } from "@shared/components/Logo";
-import { cn } from "@ui/lib";
 import Link from "next/link";
 import { type PropsWithChildren, Suspense } from "react";
 

@@ -1,24 +1,19 @@
 "use client";
 
-import { LocaleLink, useLocalePathname } from "@i18n/routing";
 import { config } from "@repo/config";
+import { Button } from "@repo/ui/button";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@repo/ui/sheet";
+import { cn } from "@repo/ui/utils";
 import { useSession } from "@saas/auth/hooks/use-session";
 import { ColorModeToggle } from "@shared/components/ColorModeToggle";
 import { LocaleSwitch } from "@shared/components/LocaleSwitch";
 import { Logo } from "@shared/components/Logo";
-import { Button } from "@ui/components/button";
-import {
-	Sheet,
-	SheetContent,
-	SheetTitle,
-	SheetTrigger,
-} from "@ui/components/sheet";
-import { cn } from "@ui/lib";
 import { MenuIcon } from "lucide-react";
 import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 import { Suspense, useEffect, useState } from "react";
 import { useDebounceCallback } from "usehooks-ts";
+import { LocaleLink, useLocalePathname } from "../../../../i18n/routing";
 
 export function NavBar() {
 	const t = useTranslations();

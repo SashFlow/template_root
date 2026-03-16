@@ -3,14 +3,14 @@
 	"compilerOptions": {
 		"plugins": [{ "name": "next" }],
 		"paths": {
-			"@analytics": ["./modules/analytics"],
+			"@components/*": ["./components/*"],
 			"@marketing/*": ["./modules/marketing/*"],
 			"@saas/*": ["./modules/saas/*"],
-			"@ui/*": ["./modules/ui/*"],
-			"@i18n": ["./modules/i18n"],
-			"@i18n/*": ["./modules/i18n/*"],
+			"@i18n": ["./i18n"],
+			"@i18n/*": ["./i18n/*"],
 			"@shared/*": ["./modules/shared/*"],
-			"content-collections": ["./.content-collections/generated"]
+			"content-collections": ["./.content-collections/generated"],
+			"@public/*": ["./public/*"]
 		}
 	},
 	"include": [

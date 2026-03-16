@@ -1,6 +1,6 @@
 import { config } from "@repo/config";
+import { cn } from "@repo/ui/utils";
 import { NavBar } from "@saas/shared/components/NavBar";
-import { cn } from "@ui/lib";
 import type { PropsWithChildren } from "react";
 
 export function AppWrapper({ children }: PropsWithChildren) {

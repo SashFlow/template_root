@@ -1,10 +1,10 @@
 "use client";
 import { authClient } from "@repo/auth/client";
+import { Button } from "@repo/ui/button";
+import { Skeleton } from "@repo/ui/skeleton";
 import { userPasskeyQueryKey, useUserPasskeysQuery } from "@saas/auth/lib/api";
 import { SettingsItem } from "@saas/shared/components/SettingsItem";
 import { useQueryClient } from "@tanstack/react-query";
-import { Button } from "@ui/components/button";
-import { Skeleton } from "@ui/components/skeleton";
 import { KeyIcon, PlusIcon, TrashIcon } from "lucide-react";
 import { useFormatter, useTranslations } from "next-intl";
 import { toast } from "sonner";

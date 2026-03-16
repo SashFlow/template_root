@@ -1,15 +1,14 @@
 "use client";
-import { LocaleLink } from "@i18n/routing";
 import { type Config, config } from "@repo/config";
+import { Button } from "@repo/ui/button";
+import { Tabs, TabsList, TabsTrigger } from "@repo/ui/tabs";
+import { cn } from "@repo/ui/utils";
 import { usePlanData } from "@saas/payments/hooks/plan-data";
 import type { PlanId } from "@saas/payments/types";
 import { useLocaleCurrency } from "@shared/hooks/locale-currency";
 import { useRouter } from "@shared/hooks/router";
 import { orpc } from "@shared/lib/orpc-query-utils";
 import { useMutation } from "@tanstack/react-query";
-import { Button } from "@ui/components/button";
-import { Tabs, TabsList, TabsTrigger } from "@ui/components/tabs";
-import { cn } from "@ui/lib";
 import {
 	ArrowRightIcon,
 	BadgePercentIcon,
@@ -19,6 +18,7 @@ import {
 } from "lucide-react";
 import { useFormatter, useTranslations } from "next-intl";
 import { useState } from "react";
+import { LocaleLink } from "../../../../i18n/routing";
 
 const plans = config.payments.plans as Config["payments"]["plans"];
 

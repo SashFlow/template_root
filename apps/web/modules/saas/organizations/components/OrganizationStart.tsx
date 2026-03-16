@@ -1,6 +1,6 @@
 "use client";
+import { Card } from "@repo/ui/card";
 import { StatsTile } from "@saas/start/components/StatsTile";
-import { Card } from "@ui/components/card";
 
 export default function OrganizationStart() {
 	return (

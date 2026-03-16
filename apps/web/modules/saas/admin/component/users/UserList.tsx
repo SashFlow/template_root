@@ -1,6 +1,17 @@
 "use client";
 
 import { authClient } from "@repo/auth/client";
+import { Button } from "@repo/ui/button";
+import { Card } from "@repo/ui/card";
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from "@repo/ui/dropdown-menu";
+import { Input } from "@repo/ui/input";
+import { Skeleton } from "@repo/ui/skeleton";
+import { Table, TableBody, TableCell, TableRow } from "@repo/ui/table";
 import { useConfirmationAlert } from "@saas/shared/components/ConfirmationAlertProvider";
 import { Pagination } from "@saas/shared/components/Pagination";
 import { UserAvatar } from "@shared/components/UserAvatar";
@@ -13,17 +24,6 @@ import {
 	getPaginationRowModel,
 	useReactTable,
 } from "@tanstack/react-table";
-import { Button } from "@ui/components/button";
-import { Card } from "@ui/components/card";
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger,
-} from "@ui/components/dropdown-menu";
-import { Input } from "@ui/components/input";
-import { Skeleton } from "@ui/components/skeleton";
-import { Table, TableBody, TableCell, TableRow } from "@ui/components/table";
 import {
 	MoreVerticalIcon,
 	Repeat1Icon,

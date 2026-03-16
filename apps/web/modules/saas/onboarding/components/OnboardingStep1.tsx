@@ -2,9 +2,7 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { authClient } from "@repo/auth/client";
-import { useSession } from "@saas/auth/hooks/use-session";
-import { UserAvatarUpload } from "@saas/settings/components/UserAvatarUpload";
-import { Button } from "@ui/components/button";
+import { Button } from "@repo/ui/button";
 import {
 	Form,
 	FormControl,
@@ -12,8 +10,10 @@ import {
 	FormField,
 	FormItem,
 	FormLabel,
-} from "@ui/components/form";
-import { Input } from "@ui/components/input";
+} from "@repo/ui/form";
+import { Input } from "@repo/ui/input";
+import { useSession } from "@saas/auth/hooks/use-session";
+import { UserAvatarUpload } from "@saas/settings/components/UserAvatarUpload";
 import { ArrowRightIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";

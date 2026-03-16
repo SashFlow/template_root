@@ -1,10 +1,10 @@
-import { LocaleLink } from "@i18n/routing";
-import { Button } from "@ui/components/button";
+import heroImage from "@public/images/hero-image.png";
+import heroImageDark from "@public/images/hero-image-dark.png";
+import { Button } from "@repo/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import heroImage from "../../../../public/images/hero-image.png";
-import heroImageDark from "../../../../public/images/hero-image-dark.png";
+import { LocaleLink } from "../../../../i18n/routing";
 
 export function Hero() {
 	return (

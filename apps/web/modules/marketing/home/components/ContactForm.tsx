@@ -5,10 +5,8 @@ import {
 	type ContactFormValues,
 	contactFormSchema,
 } from "@repo/api/modules/contact/types";
-import { orpc } from "@shared/lib/orpc-query-utils";
-import { useMutation } from "@tanstack/react-query";
-import { Alert, AlertTitle } from "@ui/components/alert";
-import { Button } from "@ui/components/button";
+import { Alert, AlertTitle } from "@repo/ui/alert";
+import { Button } from "@repo/ui/button";
 import {
 	Form,
 	FormControl,
@@ -16,9 +14,11 @@ import {
 	FormItem,
 	FormLabel,
 	FormMessage,
-} from "@ui/components/form";
-import { Input } from "@ui/components/input";
-import { Textarea } from "@ui/components/textarea";
+} from "@repo/ui/form";
+import { Input } from "@repo/ui/input";
+import { Textarea } from "@repo/ui/textarea";
+import { orpc } from "@shared/lib/orpc-query-utils";
+import { useMutation } from "@tanstack/react-query";
 import { MailCheckIcon, MailIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";

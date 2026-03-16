@@ -1,8 +1,8 @@
 "use client";
 
+import { Badge } from "@repo/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@repo/ui/card";
 import { useLocaleCurrency } from "@shared/hooks/locale-currency";
-import { Badge } from "@ui/components/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@ui/components/card";
 import { useFormatter } from "next-intl";
 import { useMemo } from "react";
 

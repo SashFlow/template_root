@@ -1,10 +1,10 @@
-import { LocaleLink, localeRedirect } from "@i18n/routing";
 import { PostContent } from "@marketing/blog/components/PostContent";
 import { getPostBySlug } from "@marketing/blog/utils/lib/posts";
 import { getBaseUrl } from "@repo/utils";
 import { getActivePathFromUrlParam } from "@shared/lib/content";
 import Image from "next/image";
 import { getLocale, getTranslations, setRequestLocale } from "next-intl/server";
+import { LocaleLink, localeRedirect } from "../../../../../i18n/routing";
 
 type Params = {
 	path: string;

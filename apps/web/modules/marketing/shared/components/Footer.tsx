@@ -1,6 +1,6 @@
-import { LocaleLink } from "@i18n/routing";
 import { config } from "@repo/config";
 import { Logo } from "@shared/components/Logo";
+import { LocaleLink } from "../../../../i18n/routing";
 
 export function Footer() {
 	return (

@@ -1,10 +1,10 @@
 "use client";
 import { config } from "@repo/config";
+import { cn } from "@repo/ui/utils";
 import { useSession } from "@saas/auth/hooks/use-session";
 import { useActiveOrganization } from "@saas/organizations/hooks/use-active-organization";
 import { UserMenu } from "@saas/shared/components/UserMenu";
 import { Logo } from "@shared/components/Logo";
-import { cn } from "@ui/lib";
 import {
 	BotMessageSquareIcon,
 	ChevronRightIcon,

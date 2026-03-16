@@ -2,6 +2,9 @@
 
 import { type UIMessage, useChat } from "@ai-sdk/react";
 import { eventIteratorToStream } from "@orpc/client";
+import { Button } from "@repo/ui/button";
+import { Textarea } from "@repo/ui/textarea";
+import { cn } from "@repo/ui/utils";
 import { SidebarContentLayout } from "@saas/shared/components/SidebarContentLayout";
 import { orpcClient } from "@shared/lib/orpc-client";
 import { orpc } from "@shared/lib/orpc-query-utils";
@@ -11,9 +14,6 @@ import {
 	useQuery,
 	useQueryClient,
 } from "@tanstack/react-query";
-import { Button } from "@ui/components/button";
-import { Textarea } from "@ui/components/textarea";
-import { cn } from "@ui/lib";
 import { EllipsisIcon, PlusIcon, SendIcon } from "lucide-react";
 import { useFormatter } from "next-intl";
 import { useQueryState } from "nuqs";

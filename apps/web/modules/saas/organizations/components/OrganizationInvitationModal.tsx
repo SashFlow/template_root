@@ -1,11 +1,11 @@
 "use client";
 
 import { authClient } from "@repo/auth/client";
+import { Button } from "@repo/ui/button";
 import { OrganizationLogo } from "@saas/organizations/components/OrganizationLogo";
 import { organizationListQueryKey } from "@saas/organizations/lib/api";
 import { useRouter } from "@shared/hooks/router";
 import { useQueryClient } from "@tanstack/react-query";
-import { Button } from "@ui/components/button";
 import { CheckIcon, XIcon } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";

@@ -1,5 +1,5 @@
-import { Card } from "@ui/components/card";
-import { cn } from "@ui/lib";
+import { Card } from "@repo/ui/card";
+import { cn } from "@repo/ui/utils";
 import type { PropsWithChildren, ReactNode } from "react";
 
 export function SettingsItem({

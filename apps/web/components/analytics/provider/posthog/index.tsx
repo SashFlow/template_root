@@ -1,6 +1,5 @@
 "use client";
 
-// @ts-expect-error package is not installed per default
 import posthog from "posthog-js";
 import { useEffect } from "react";
 

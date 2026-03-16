@@ -1,21 +1,21 @@
 "use client";
 import { authClient } from "@repo/auth/client";
-import { useSession } from "@saas/auth/hooks/use-session";
-import { useUserAccountsQuery } from "@saas/auth/lib/api";
-import { SettingsItem } from "@saas/shared/components/SettingsItem";
-import { useMutation } from "@tanstack/react-query";
-import { Button } from "@ui/components/button";
-import { Card } from "@ui/components/card";
+import { Button } from "@repo/ui/button";
+import { Card } from "@repo/ui/card";
 import {
 	Dialog,
 	DialogContent,
 	DialogHeader,
 	DialogTitle,
-} from "@ui/components/dialog";
-import { FormItem } from "@ui/components/form";
-import { Input } from "@ui/components/input";
-import { Label } from "@ui/components/label";
-import { PasswordInput } from "@ui/components/password-input";
+} from "@repo/ui/dialog";
+import { FormItem } from "@repo/ui/form";
+import { Input } from "@repo/ui/input";
+import { Label } from "@repo/ui/label";
+import { PasswordInput } from "@repo/ui/password-input";
+import { useSession } from "@saas/auth/hooks/use-session";
+import { useUserAccountsQuery } from "@saas/auth/lib/api";
+import { SettingsItem } from "@saas/shared/components/SettingsItem";
+import { useMutation } from "@tanstack/react-query";
 import {
 	ArrowRightIcon,
 	CheckIcon,

@@ -2,19 +2,19 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { authClient } from "@repo/auth/client";
-import { OrganizationRoleSelect } from "@saas/organizations/components/OrganizationRoleSelect";
-import { fullOrganizationQueryKey } from "@saas/organizations/lib/api";
-import { SettingsItem } from "@saas/shared/components/SettingsItem";
-import { useQueryClient } from "@tanstack/react-query";
-import { Button } from "@ui/components/button";
+import { Button } from "@repo/ui/button";
 import {
 	Form,
 	FormControl,
 	FormField,
 	FormItem,
 	FormLabel,
-} from "@ui/components/form";
-import { Input } from "@ui/components/input";
+} from "@repo/ui/form";
+import { Input } from "@repo/ui/input";
+import { OrganizationRoleSelect } from "@saas/organizations/components/OrganizationRoleSelect";
+import { fullOrganizationQueryKey } from "@saas/organizations/lib/api";
+import { SettingsItem } from "@saas/shared/components/SettingsItem";
+import { useQueryClient } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";

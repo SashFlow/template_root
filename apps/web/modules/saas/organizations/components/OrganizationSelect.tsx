@@ -1,12 +1,5 @@
 "use client";
 import { config } from "@repo/config";
-import { useSession } from "@saas/auth/hooks/use-session";
-import { useActiveOrganization } from "@saas/organizations/hooks/use-active-organization";
-import { useOrganizationListQuery } from "@saas/organizations/lib/api";
-import { ActivePlanBadge } from "@saas/payments/components/ActivePlanBadge";
-import { UserAvatar } from "@shared/components/UserAvatar";
-import { useRouter } from "@shared/hooks/router";
-import { clearCache } from "@shared/lib/cache";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -17,7 +10,14 @@ import {
 	DropdownMenuRadioItem,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-} from "@ui/components/dropdown-menu";
+} from "@repo/ui/dropdown-menu";
+import { useSession } from "@saas/auth/hooks/use-session";
+import { useActiveOrganization } from "@saas/organizations/hooks/use-active-organization";
+import { useOrganizationListQuery } from "@saas/organizations/lib/api";
+import { ActivePlanBadge } from "@saas/payments/components/ActivePlanBadge";
+import { UserAvatar } from "@shared/components/UserAvatar";
+import { useRouter } from "@shared/hooks/router";
+import { clearCache } from "@shared/lib/cache";
 import { ChevronsUpDownIcon, PlusIcon } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";

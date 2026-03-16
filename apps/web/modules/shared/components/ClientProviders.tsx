@@ -1,7 +1,7 @@
 "use client";
 
-import { AnalyticsScript } from "@analytics";
 import { ProgressProvider } from "@bprogress/next/app";
+import { AnalyticsScript } from "@components/analytics";
 import { config } from "@repo/config";
 import { Toaster } from "@repo/ui/sonner";
 import { ApiClientProvider } from "@shared/components/ApiClientProvider";

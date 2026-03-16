@@ -1,7 +1,5 @@
 "use client";
 
-import { updateLocale } from "@i18n/lib/update-locale";
-import { useLocalePathname, useLocaleRouter } from "@i18n/routing";
 import { config } from "@repo/config";
 import type { Locale } from "@repo/i18n";
 import { Button } from "@repo/ui/button";
@@ -16,6 +14,8 @@ import { LanguagesIcon } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useLocale } from "next-intl";
 import { useState } from "react";
+import { updateLocale } from "../../../i18n/lib/update-locale";
+import { useLocalePathname, useLocaleRouter } from "../../../i18n/routing";
 
 const { locales } = config.i18n;
 

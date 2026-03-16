@@ -1,8 +1,8 @@
 "use client";
 
-import { LocaleLink } from "@i18n/routing";
-import { Button } from "@ui/components/button";
+import { Button } from "@repo/ui/button";
 import { UndoIcon } from "lucide-react";
+import { LocaleLink } from "../../../../i18n/routing";
 
 export function NotFound() {
 	return (

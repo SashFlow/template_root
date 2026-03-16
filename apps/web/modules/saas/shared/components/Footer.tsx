@@ -1,5 +1,5 @@
-import { LocaleLink } from "@i18n/routing";
-import { cn } from "@ui/lib";
+import { cn } from "@repo/ui/utils";
+import { LocaleLink } from "../../../../i18n/routing";
 
 export function Footer() {
 	return (

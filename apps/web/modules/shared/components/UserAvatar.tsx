@@ -1,12 +1,11 @@
 import { config } from "@repo/config";
-import { Avatar, AvatarFallback, AvatarImage } from "@ui/components/avatar";
+import { Avatar, AvatarFallback, AvatarImage } from "@repo/ui/avatar";
 import { useMemo } from "react";
 
 export const UserAvatar = ({
 	name,
 	avatarUrl,
 	className,
-	ref,
 }: React.ComponentProps<typeof Avatar> & {
 	name: string;
 	avatarUrl?: string | null;
@@ -33,7 +32,7 @@ export const UserAvatar = ({
 	);
 
 	return (
-		<Avatar ref={ref} className={className}>
+		<Avatar className={className}>
 			<AvatarImage src={avatarSrc} />
 			<AvatarFallback className="bg-secondary/10 text-secondary">
 				{initials}

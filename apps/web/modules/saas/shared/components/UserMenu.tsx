@@ -3,8 +3,6 @@
 import { DropdownMenuSub } from "@radix-ui/react-dropdown-menu";
 import { authClient } from "@repo/auth/client";
 import { config } from "@repo/config";
-import { useSession } from "@saas/auth/hooks/use-session";
-import { UserAvatar } from "@shared/components/UserAvatar";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
@@ -17,7 +15,9 @@ import {
 	DropdownMenuSubContent,
 	DropdownMenuSubTrigger,
 	DropdownMenuTrigger,
-} from "@ui/components/dropdown-menu";
+} from "@repo/ui/dropdown-menu";
+import { useSession } from "@saas/auth/hooks/use-session";
+import { UserAvatar } from "@shared/components/UserAvatar";
 import {
 	BookIcon,
 	HardDriveIcon,

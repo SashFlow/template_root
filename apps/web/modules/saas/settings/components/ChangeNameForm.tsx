@@ -2,10 +2,10 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { authClient } from "@repo/auth/client";
+import { Button } from "@repo/ui/button";
+import { Input } from "@repo/ui/input";
 import { useSession } from "@saas/auth/hooks/use-session";
 import { SettingsItem } from "@saas/shared/components/SettingsItem";
-import { Button } from "@ui/components/button";
-import { Input } from "@ui/components/input";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -55,7 +55,6 @@ export function ChangeNameForm() {
 				<div className="mt-4 flex justify-end">
 					<Button
 						type="submit"
-						loading={form.formState.isSubmitting}
 						disabled={
 							!(
 								form.formState.isValid &&
