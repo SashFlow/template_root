@@ -77,7 +77,7 @@ export function ContactForm() {
 							name="name"
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>
+									<FormLabel className="mb-1">
 										{t("contact.form.name")}
 									</FormLabel>
 									<FormControl>
@@ -93,7 +93,7 @@ export function ContactForm() {
 							name="email"
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>
+									<FormLabel className="mb-1">
 										{t("contact.form.email")}
 									</FormLabel>
 									<FormControl>
@@ -109,7 +109,7 @@ export function ContactForm() {
 							name="message"
 							render={({ field }) => (
 								<FormItem>
-									<FormLabel>
+									<FormLabel className="mb-1">
 										{t("contact.form.message")}
 									</FormLabel>
 									<FormControl>
