@@ -823,6 +823,263 @@
 			"uuid": "uuid"
 		}
 	},
+	"marketing": {
+		"nav": {
+			"home": "Home",
+			"blog": "Blog",
+			"diary": "Diary",
+			"gallery": "Gallery",
+			"about": "About",
+			"searchPlaceholder": "Articles / Gallery / Diary / Resources"
+		},
+		"footer": {
+			"brand": "Yike Time",
+			"rightsReserved": "All rights reserved."
+		},
+		"meta": {
+			"about": "About - {brand}",
+			"blog": "Blog - {brand}",
+			"diary": "Diary - {brand}",
+			"gallery": "Gallery - {brand}"
+		},
+		"common": {
+			"all": "All",
+			"endOfList": "You have reached the end",
+			"today": "Today"
+		},
+		"about": {
+			"title": "About Yike Time",
+			"showMore": "Show more",
+			"showLess": "Show less",
+			"updating": "More updates coming soon"
+		},
+		"home": {
+			"blog": {
+				"title": "Latest Articles",
+				"subtitle": "Capturing moments from everyday life"
+			},
+			"diary": {
+				"title": "Diary Notes",
+				"subtitle": "My daily notes",
+				"mottoLine1": "Those",
+				"mottoLine2": "gentle stories",
+				"mottoLine3": "deserve to leave traces",
+				"empty": "No diary entries yet"
+			},
+			"gallery": {
+				"title": "Photo Gallery",
+				"subtitle": "Capturing beautiful moments through the lens"
+			},
+			"stats": {
+				"totalVisits": "Total visits",
+				"todayVisits": "Visits today"
+			}
+		},
+		"diaryPage": {
+			"emptyList": "No diary entries yet",
+			"emptyDetail": "No diary content available",
+			"commentPlaceholder": "Share your thoughts",
+			"usernamePlaceholder": "Username",
+			"guest": "Guest",
+			"send": "Send"
+		},
+		"blog": {
+			"share": "Share",
+			"cardLabel": "Yike blog article",
+			"providedBy": "Powered by Yike personal blog",
+			"copyLink": "Copy link",
+			"copied": "Link copied to clipboard",
+			"backToList": "Back to article list"
+		},
+		"galleryPage": {
+			"empty": "No gallery items available",
+			"likes": "Likes",
+			"views": "Views",
+			"comments": "Comments"
+		}
+	},
+	"saasUi": {
+		"accountHeaders": {
+			"notes": {
+				"title": "Notes Management",
+				"subtitle": "Write and manage your notes"
+			},
+			"pictures": {
+				"title": "Picture Management",
+				"subtitle": "Manage your image collection"
+			},
+			"tags": {
+				"title": "Tag Management",
+				"subtitle": "Manage note category tags"
+			},
+			"fell": {
+				"title": "Mood Management",
+				"subtitle": "Record and manage your life moments"
+			}
+		},
+		"fell": {
+			"countLabel": "{count} entries",
+			"newButton": "New entry",
+			"newTooltip": "Create a new entry",
+			"editTitle": "Edit entry",
+			"createTitle": "New entry",
+			"nameLabel": "Name",
+			"namePlaceholder": "Entry name",
+			"weatherLabel": "Weather",
+			"weatherPlaceholder": "e.g. Sunny, Cloudy, Rainy",
+			"imageLabel": "Image",
+			"imagePreviewAlt": "Image preview",
+			"uploadButton": "Click to upload an image",
+			"uploading": "Uploading...",
+			"contentLabel": "Content",
+			"cancelButton": "Cancel",
+			"cancelTooltip": "Discard current edits",
+			"submitEdit": "Save changes",
+			"submitCreate": "Create entry",
+			"submitTooltipEdit": "Save changes to this entry",
+			"submitTooltipCreate": "Save and create entry",
+			"emptyState": "No entries yet. Click \"New entry\" to start.",
+			"publishedBadge": "Published",
+			"publishTooltip": "Publish to diary",
+			"unpublishTooltip": "Unpublish from diary",
+			"editTooltip": "Edit entry content",
+			"deleteTooltip": "Delete this entry",
+			"confirmDelete": "Are you sure you want to delete this entry?",
+			"toast": {
+				"imageUploadFailed": "Image upload failed",
+				"updated": "Entry updated successfully",
+				"created": "Entry created successfully",
+				"deleted": "Entry deleted successfully",
+				"published": "Published successfully",
+				"unpublished": "Unpublished"
+			}
+		},
+		"notes": {
+			"countLabel": "{count} notes",
+			"newButton": "New note",
+			"newTooltip": "Create a new note",
+			"editTitle": "Edit note",
+			"createTitle": "New note",
+			"titleLabel": "Title",
+			"titlePlaceholder": "Note title",
+			"tagLabel": "Tag",
+			"tagPlaceholder": "Select a tag",
+			"noTagsWarning": "Create a tag first in tag management.",
+			"summaryLabel": "Summary",
+			"summaryPlaceholder": "Optional short description",
+			"coverLabel": "Cover image",
+			"coverAlt": "Cover preview",
+			"uploadButton": "Click to upload a cover image",
+			"uploading": "Uploading...",
+			"contentLabel": "Content",
+			"cancelButton": "Cancel",
+			"cancelTooltip": "Discard current edits",
+			"submitEdit": "Save changes",
+			"submitCreate": "Create note",
+			"submitTooltipEdit": "Save changes to this note",
+			"submitTooltipCreate": "Save and create note",
+			"emptyState": "No notes yet. Click \"New note\" to start writing.",
+			"publishedBadge": "Published",
+			"draftBadge": "Draft",
+			"publishTooltip": "Publish note and make it visible",
+			"unpublishTooltip": "Unpublish and move note to draft",
+			"editTooltip": "Edit note content",
+			"deleteTooltip": "Delete this note",
+			"confirmDelete": "Are you sure you want to delete this note?",
+			"toast": {
+				"coverUploadFailed": "Cover image upload failed",
+				"updated": "Note updated successfully",
+				"created": "Note created successfully",
+				"deleted": "Note deleted successfully",
+				"published": "Note published successfully",
+				"unpublished": "Note unpublished"
+			}
+		},
+		"pictures": {
+			"countLabel": "{count} images",
+			"newButton": "New image",
+			"newTooltip": "Add a new image",
+			"editTitle": "Edit image",
+			"createTitle": "New image",
+			"nameLabel": "Name",
+			"namePlaceholder": "Image name",
+			"titleLabel": "Title",
+			"titlePlaceholder": "Image title",
+			"imageLabel": "Image",
+			"imagePreviewAlt": "Image preview",
+			"uploadButton": "Click to upload an image",
+			"uploading": "Uploading...",
+			"descriptionLabel": "Description (optional)",
+			"cancelButton": "Cancel",
+			"cancelTooltip": "Discard current edits",
+			"submitEdit": "Save changes",
+			"submitCreate": "Create image",
+			"submitTooltipEdit": "Save changes to this image",
+			"submitTooltipCreate": "Save and create image",
+			"emptyState": "No images yet. Click \"New image\" to add one.",
+			"publishedBadge": "Published",
+			"publishTooltip": "Publish to gallery",
+			"unpublishTooltip": "Unpublish from gallery",
+			"editTooltip": "Edit image details",
+			"deleteTooltip": "Delete this image",
+			"confirmDelete": "Are you sure you want to delete this image?",
+			"toast": {
+				"uploadSuccess": "Image uploaded successfully",
+				"uploadFailed": "Image upload failed. Please try again.",
+				"updated": "Image updated successfully",
+				"created": "Image created successfully",
+				"deleted": "Image deleted successfully",
+				"published": "Published successfully",
+				"unpublished": "Unpublished"
+			}
+		},
+		"tags": {
+			"newPlaceholder": "Enter tag name...",
+			"newButton": "Add tag",
+			"emptyState": "No tags yet. Add one to get started.",
+			"saveButton": "Save",
+			"cancelButton": "Cancel",
+			"notesCount": "{count} notes",
+			"confirmDelete": "Are you sure you want to delete this tag? Linked notes will also be deleted.",
+			"toast": {
+				"created": "Tag added successfully",
+				"updated": "Tag updated successfully",
+				"deleted": "Tag deleted successfully"
+			}
+		},
+		"editor": {
+			"emojiCategories": {
+				"recent": "Recent",
+				"faces": "Faces",
+				"hands": "Hands",
+				"hearts": "Hearts",
+				"nature": "Nature",
+				"food": "Food",
+				"objects": "Objects"
+			},
+			"highlightColors": {
+				"yellow": "Yellow",
+				"orange": "Orange",
+				"green": "Green",
+				"blue": "Blue",
+				"purple": "Purple",
+				"red": "Red",
+				"pink": "Pink",
+				"gray": "Gray"
+			},
+			"toolbar": {
+				"clearHighlight": "Clear highlight",
+				"bold": "Bold",
+				"italic": "Italic",
+				"heading": "Heading",
+				"bulletedList": "Bulleted list",
+				"numberedList": "Numbered list",
+				"quote": "Quote",
+				"highlightColor": "Highlight color",
+				"emoji": "Emoji"
+			}
+		}
+	},
 	"choosePlan": {
 		"title": "Choose your plan",
 		"description": "To continue, please select a plan."
