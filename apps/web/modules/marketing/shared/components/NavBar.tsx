@@ -143,7 +143,7 @@ export function NavBar() {
 								<Button
 									className="lg:hidden"
 									size="icon"
-									variant="light"
+									variant="destructive"
 									aria-label="Menu"
 								>
 									<MenuIcon className="size-4" />

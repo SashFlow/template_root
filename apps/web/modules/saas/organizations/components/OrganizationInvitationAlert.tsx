@@ -9,7 +9,7 @@ export function OrganizationInvitationAlert({
 }) {
 	const t = useTranslations();
 	return (
-		<Alert variant="primary" className={className}>
+		<Alert variant="info" className={className}>
 			<MailCheckIcon />
 			<AlertTitle>{t("organizations.invitationAlert.title")}</AlertTitle>
 			<AlertDescription>

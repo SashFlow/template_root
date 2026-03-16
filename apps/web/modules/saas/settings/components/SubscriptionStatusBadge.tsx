@@ -23,16 +23,16 @@ export function SubscriptionStatusBadge({
 		unpaid: t("settings.billing.activePlan.status.unpaid"),
 	};
 
-	const badgeColors: Record<string, BadgeProps["status"]> = {
+	const badgeColors: Record<string, BadgeProps["variant"]> = {
 		active: "success",
-		canceled: "error",
-		expired: "error",
+		canceled: "destructive",
+		expired: "destructive",
 		incomplete: "warning",
 		past_due: "warning",
 		paused: "warning",
 		trialing: "info",
-		unpaid: "error",
+		unpaid: "destructive",
 	};
 
-	return <Badge status={badgeColors[status]}>{badgeLabels[status]}</Badge>;
+	return <Badge variant={badgeColors[status]}>{badgeLabels[status]}</Badge>;
 }

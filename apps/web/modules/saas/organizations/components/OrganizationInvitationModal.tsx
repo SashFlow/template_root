@@ -92,7 +92,7 @@ export function OrganizationInvitationModal({
 			<div className="flex gap-2">
 				<Button
 					className="flex-1"
-					variant="light"
+					variant="destructive"
 					onClick={() => onSelectAnswer(false)}
 					disabled={!!submitting}
 					loading={submitting === "reject"}

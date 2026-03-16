@@ -10,7 +10,6 @@ export const OrganizationLogo = ({
 	name,
 	logoUrl,
 	className,
-	ref,
 }: React.ComponentProps<typeof Avatar> & {
 	name: string;
 	logoUrl?: string | null;
@@ -45,7 +44,7 @@ export const OrganizationLogo = ({
 	}
 
 	return (
-		<Avatar ref={ref} className={className}>
+		<Avatar className={className}>
 			<AvatarImage src={logoSrc} />
 			<AvatarFallback>
 				<BoringAvatar

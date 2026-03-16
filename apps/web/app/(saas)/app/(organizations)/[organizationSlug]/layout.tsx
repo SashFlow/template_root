@@ -2,6 +2,7 @@ import { config } from "@repo/config";
 import { getActiveOrganization } from "@saas/auth/lib/server";
 import { activeOrganizationQueryKey } from "@saas/organizations/lib/api";
 import { AppWrapper } from "@saas/shared/components/AppWrapper";
+import { orpcClient } from "@shared/lib/orpc-client";
 import { orpc } from "@shared/lib/orpc-query-utils";
 import { getServerQueryClient } from "@shared/lib/server";
 import { notFound } from "next/navigation";
@@ -31,13 +32,17 @@ export default async function OrganizationLayout({
 	});
 
 	if (config.users.enableBilling) {
-		await queryClient.prefetchQuery(
-			orpc.payments.listPurchases.queryOptions({
+		await queryClient.prefetchQuery({
+			queryKey: orpc.payments.listPurchases.queryKey({
 				input: {
 					organizationId: organization.id,
 				},
 			}),
-		);
+			queryFn: () =>
+				orpcClient.payments.listPurchases({
+					organizationId: organization.id,
+				}),
+		});
 	}
 
 	return <AppWrapper>{children}</AppWrapper>;

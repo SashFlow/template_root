@@ -21,13 +21,19 @@ export default async function AiDemoPage() {
 	});
 
 	if (chats.length > 0) {
-		await queryClient.prefetchQuery(
-			orpc.ai.chats.find.queryOptions({
+		const chatId = chats[0].id;
+
+		await queryClient.prefetchQuery({
+			queryKey: orpc.ai.chats.find.queryKey({
 				input: {
-					id: chats[0].id,
+					id: chatId,
 				},
 			}),
-		);
+			queryFn: () =>
+				orpcClient.ai.chats.find({
+					id: chatId,
+				}),
+		});
 	}
 
 	return (

@@ -6,6 +6,7 @@ import { ActiveOrganizationProvider } from "@saas/organizations/components/Activ
 import { organizationListQueryKey } from "@saas/organizations/lib/api";
 import { ConfirmationAlertProvider } from "@saas/shared/components/ConfirmationAlertProvider";
 import { Document } from "@shared/components/Document";
+import { orpcClient } from "@shared/lib/orpc-client";
 import { orpc } from "@shared/lib/orpc-query-utils";
 import { getServerQueryClient } from "@shared/lib/server";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
@@ -38,11 +39,12 @@ export default async function SaaSLayout({ children }: PropsWithChildren) {
 	}
 
 	if (config.users.enableBilling) {
-		await queryClient.prefetchQuery(
-			orpc.payments.listPurchases.queryOptions({
+		await queryClient.prefetchQuery({
+			queryKey: orpc.payments.listPurchases.queryKey({
 				input: {},
 			}),
-		);
+			queryFn: () => orpcClient.payments.listPurchases({}),
+		});
 	}
 
 	return (

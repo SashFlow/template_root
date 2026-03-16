@@ -199,7 +199,7 @@ export function LoginForm() {
 
 							{form.formState.isSubmitted &&
 								form.formState.errors.root?.message && (
-									<Alert variant="error">
+									<Alert variant="destructive">
 										<AlertTriangleIcon />
 										<AlertTitle>
 											{form.formState.errors.root.message}
@@ -322,7 +322,7 @@ export function LoginForm() {
 
 								{config.auth.enablePasskeys && (
 									<Button
-										variant="light"
+										variant="destructive"
 										className="w-full sm:col-span-2"
 										onClick={() => signInWithPasskey()}
 									>
