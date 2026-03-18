@@ -10,8 +10,8 @@ export function Footer() {
 					<Logo className="opacity-70 grayscale" />
 					<p className="mt-3 text-sm opacity-70">
 						© {new Date().getFullYear()} {config.appName}.{" "}
-						<a href="https://supastarter.dev">
-							Built with supastarter
+						<a href="https://sashflow.com">
+							All rights reserved Sashflow
 						</a>
 						.
 					</p>
@@ -22,12 +22,8 @@ export function Footer() {
 						Blog
 					</LocaleLink>
 
-					<a href="#features" className="block">
-						Features
-					</a>
-
-					<a href="/#pricing" className="block">
-						Pricing
+					<a href="#team" className="block">
+						Team
 					</a>
 				</div>
 

@@ -211,7 +211,8 @@
 			"docs": "Docs",
 			"faq": "FAQ",
 			"login": "Login",
-			"pricing": "Pricing"
+			"pricing": "Pricing",
+			"team": "Team"
 		},
 		"tableOfContents": {
 			"title": "On this page"
@@ -291,7 +292,7 @@
 			}
 		},
 		"submit": "Subscribe",
-		"subtitle": "Be among the first to get access to supastarter.nextjs.",
+		"subtitle": "Be among the first to get access to our blogs and newletters.",
 		"title": "Get early access"
 	},
 	"onboarding": {

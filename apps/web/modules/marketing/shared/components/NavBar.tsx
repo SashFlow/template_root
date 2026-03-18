@@ -55,32 +55,12 @@ export function NavBar() {
 		href: string;
 	}[] = [
 		{
-			label: t("common.menu.pricing"),
-			href: "/#pricing",
-		},
-		{
-			label: t("common.menu.faq"),
-			href: "/#faq",
+			label: t("common.menu.team"),
+			href: "/#team",
 		},
 		{
 			label: t("common.menu.blog"),
 			href: "/blog",
-		},
-		{
-			label: t("common.menu.changelog"),
-			href: "/changelog",
-		},
-		...(config.contactForm.enabled
-			? [
-					{
-						label: t("common.menu.contact"),
-						href: "/contact",
-					},
-				]
-			: []),
-		{
-			label: t("common.menu.docs"),
-			href: "/docs",
 		},
 	];
 
@@ -170,15 +150,12 @@ export function NavBar() {
 									))}
 
 									<NextLink
-										key={user ? "start" : "login"}
-										href={user ? "/app" : "/auth/login"}
-										className="block px-3 py-2 text-base"
+										href={"/contact"}
+										className="block px-3 py-2 text-white bg-primary rounded-md mt-4"
 										onClick={handleMobileMenuClose}
 										prefetch={!user}
-									>
-										{user
-											? t("common.menu.dashboard")
-											: t("common.menu.login")}
+										>
+										{t("common.menu.contact")}
 									</NextLink>
 								</div>
 							</SheetContent>
@@ -201,10 +178,11 @@ export function NavBar() {
 									key="login"
 									className="hidden lg:flex"
 									asChild
-									variant="secondary"
+									variant="default"
+									disabled={!config.contactForm.enabled}
 								>
-									<NextLink href="/auth/login" prefetch>
-										{t("common.menu.login")}
+									<NextLink href="/contact" prefetch>
+										{t("common.menu.contact")}
 									</NextLink>
 								</Button>
 							))}

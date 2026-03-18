@@ -20,11 +20,6 @@ export function ColorModeToggle() {
 
 	const colorModeOptions = [
 		{
-			value: "system",
-			label: "System",
-			icon: HardDriveIcon,
-		},
-		{
 			value: "light",
 			label: "Light",
 			icon: SunIcon,

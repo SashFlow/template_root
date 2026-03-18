@@ -1,8 +1,9 @@
-import { FaqSection } from "@marketing/home/components/FaqSection";
 import { Features } from "@marketing/home/components/Features";
 import { Hero } from "@marketing/home/components/Hero";
 import { Newsletter } from "@marketing/home/components/Newsletter";
-import { PricingSection } from "@marketing/home/components/PricingSection";
+import Industries from "@marketing/home/components/Industries";
+import Process from "@marketing/home/components/Process";
+import Team from "@marketing/home/components/Team";
 import { setRequestLocale } from "next-intl/server";
 
 export default async function Home({
@@ -17,8 +18,9 @@ export default async function Home({
 		<>
 			<Hero />
 			<Features />
-			<PricingSection />
-			<FaqSection />
+			<Industries />
+			<Process />
+			<Team />
 			<Newsletter />
 		</>
 	);

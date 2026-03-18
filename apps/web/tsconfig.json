@@ -3,6 +3,8 @@
 	"compilerOptions": {
 		"plugins": [{ "name": "next" }],
 		"paths": {
+			"@constants": ["./constants/index.ts"],
+			"@constants/*": ["./constants/*"],
 			"@components/*": ["./components/*"],
 			"@marketing/*": ["./modules/marketing/*"],
 			"@saas/*": ["./modules/saas/*"],

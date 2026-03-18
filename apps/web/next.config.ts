@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
 				hostname: "avatars.githubusercontent.com",
 			},
 			{
+				// unsplash images
+				protocol: "https",
+				hostname: "images.unsplash.com",
+			},
+			{
 				// placeholder images
 				protocol: "https",
 				hostname: "picsum.photos",
