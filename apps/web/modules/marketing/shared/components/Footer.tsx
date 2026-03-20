@@ -1,40 +1,45 @@
-import { config } from "@repo/config";
-import { Logo } from "@shared/components/Logo";
-import { LocaleLink } from "../../../../i18n/routing";
-
 export function Footer() {
 	return (
-		<footer className="border-t py-8 text-foreground/60 text-sm">
-			<div className="container grid grid-cols-1 gap-6 lg:grid-cols-3">
+		<footer className="bg-secondary w-full py-16 px-8 text-surface">
+			<div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 max-w-7xl mx-auto">
 				<div>
-					<Logo className="opacity-70 grayscale" />
-					<p className="mt-3 text-sm opacity-70">
-						© {new Date().getFullYear()} {config.appName}.{" "}
-						<a href="https://sashflow.com">
-							All rights reserved Sashflow
-						</a>
-						.
+					<div className="text-3xl font-black text-surface font-industrial uppercase tracking-tighter mb-2">
+						SashFlow
+					</div>
+					<p className="font-approachable text-xs tracking-wide text-surface/60 uppercase">
+						AI infrastructure for industries.
 					</p>
 				</div>
-
-				<div className="flex flex-col gap-2">
-					<LocaleLink href="/blog" className="block">
-						Blog
-					</LocaleLink>
-
-					<a href="#team" className="block">
-						Team
+				<div className="flex gap-12">
+					<a
+						className="font-approachable text-xs tracking-[+0.04em] uppercase text-tertiary-fixed font-bold"
+						href="#about"
+					>
+						About
+					</a>
+					<a
+						className="font-approachable text-xs tracking-[+0.04em] uppercase text-surface/70 hover:text-surface transition-colors"
+						href="#industries"
+					>
+						Industries
+					</a>
+					<a
+						className="font-approachable text-xs tracking-[+0.04em] uppercase text-surface/70 hover:text-surface transition-colors"
+						href="#contact"
+					>
+						Contact
 					</a>
 				</div>
-
-				<div className="flex flex-col gap-2">
-					<LocaleLink href="/legal/privacy-policy" className="block">
-						Privacy policy
-					</LocaleLink>
-
-					<LocaleLink href="/legal/terms" className="block">
-						Terms and conditions
-					</LocaleLink>
+			</div>
+			<div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-surface/10 flex flex-col md:flex-row justify-between items-center gap-4">
+				<p className="font-approachable text-[10px] tracking-widest uppercase text-surface/40">
+					© 2024 SashFlow AI. Engineering the Industrial Renaissance.
+				</p>
+				<div className="flex gap-6 text-[10px] tracking-widest uppercase text-surface/40">
+					<span>Privacy</span>
+					<span>Security</span>
+					<span>Documentation</span>
+					<span>Infrastructure Status</span>
 				</div>
 			</div>
 		</footer>

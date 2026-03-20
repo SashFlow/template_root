@@ -2,9 +2,8 @@
 
 import heroImage from "@public/images/feature.svg";
 import { MobileIcon } from "@radix-ui/react-icons";
-import { cn } from "@repo/ui/utils";
 import { CloudIcon, ComputerIcon, StarIcon, WandIcon } from "lucide-react";
-import Image, { type StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
 import type { JSXElementConstructor, ReactNode } from "react";
 
 export const featureTabs: Array<{
@@ -93,119 +92,53 @@ export const featureTabs: Array<{
 
 export function Features() {
 	return (
-		<section id="features" className="scroll-my-20 py-12 lg:py-16 xl:py-24">
-			<div className="container">
-				<div className="mb-6 lg:mb-0 max-w-3xl">
-					<small className="font-medium text-xs uppercase tracking-wider text-primary mb-4 block">
-						Incredible features
-					</small>
-					<h2 className="font-serif text-2xl lg:text-3xl xl:text-4xl font-medium">
-						Features your clients will love
-					</h2>
-					<p className="mt-2 text-base lg:text-lg text-foreground/60">
-						In this section you can showcase all the features of
-						your SaaS provides and how they can benefit your
-						clients.
-					</p>
-				</div>
-			</div>
-
-			<div>
-				<div className="container mt-8 lg:mt-12 grid grid-cols-1 gap-4">
-					{featureTabs.map((tab) => {
-						const filteredStack = tab.stack || [];
-						const filteredHighlights = tab.highlights || [];
-						return (
-							<div
-								key={tab.id}
-								className="bg-card rounded-4xl p-6 lg:p-8"
-							>
-								<div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 lg:gap-12">
-									<div>
-										<h3 className="font-normal text-lg text-foreground leading-tight md:text-xl lg:text-2xl font-serif">
-											<span className="font-medium">
-												{tab.title}.{" "}
-											</span>
-											<span className="font-sans">
-												{tab.subtitle}
-											</span>
-										</h3>
-
-										{tab.description && (
-											<p className="mt-4 text-foreground/60">
-												{tab.description}
-											</p>
-										)}
-
-										{filteredStack?.length > 0 && (
-											<div className="mt-4 flex flex-wrap gap-6">
-												{filteredStack.map(
-													(tool, k) => (
-														<a
-															href={tool.href}
-															target="_blank"
-															key={`stack-tool-${k}`}
-															className="flex items-center gap-2"
-															rel="noreferrer"
-														>
-															<tool.icon className="size-6" />
-															<strong className="block text-sm">
-																{tool.title}
-															</strong>
-														</a>
-													),
-												)}
-											</div>
-										)}
-									</div>
-									<div>
-										{tab.image && (
-											<Image
-												src={tab.image}
-												alt={tab.title}
-												className={cn(
-													" h-auto w-full max-w-xl",
-													{
-														"rounded-2xl border-4 border-secondary/10":
-															tab.imageBorder,
-													},
-												)}
-											/>
-										)}
-									</div>
-								</div>
-
-								{filteredHighlights.length > 0 && (
-									<div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:mt-12">
-										{filteredHighlights.map(
-											(highlight, k) => (
-												<div
-													key={`highlight-${k}`}
-													className="flex flex-col items-stretch justify-between rounded-2xl p-4 lg:p-6 bg-background"
-												>
-													<div>
-														<highlight.icon
-															className="text-primary text-xl"
-															width="1em"
-															height="1em"
-														/>
-														<strong className="mt-2 block font-medium text-lg">
-															{highlight.title}
-														</strong>
-														<p className="mt-1 text-sm">
-															{
-																highlight.description
-															}
-														</p>
-													</div>
-												</div>
-											),
-										)}
-									</div>
-								)}
-							</div>
-						);
-					})}
+		<section className="py-32 px-8">
+			<div className="max-w-7xl mx-auto">
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div className="p-8 bg-surface-container-lowest border-l-2 border-primary">
+						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-secondary mb-4">
+							Foundation
+						</h4>
+						<h3 className="font-approachable text-xl font-bold mb-3 leading-tight">
+							25+ Years Experience
+						</h3>
+						<p className="font-approachable text-sm text-on-surface-variant opacity-80">
+							Across AI, automation, and industry operations.
+						</p>
+					</div>
+					<div className="p-8 bg-surface-container-lowest border-l-2 border-primary">
+						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-secondary mb-4">
+							Context
+						</h4>
+						<h3 className="font-approachable text-xl font-bold mb-3 leading-tight">
+							Industry Workflow Understanding
+						</h3>
+						<p className="font-approachable text-sm text-on-surface-variant opacity-80">
+							We understand how real industries operate.
+						</p>
+					</div>
+					<div className="p-8 bg-surface-container-lowest border-l-2 border-primary">
+						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-secondary mb-4">
+							Capability
+						</h4>
+						<h3 className="font-approachable text-xl font-bold mb-3 leading-tight">
+							AI Product Development
+						</h3>
+						<p className="font-approachable text-sm text-on-surface-variant opacity-80">
+							From model design to production systems.
+						</p>
+					</div>
+					<div className="p-8 bg-surface-container-lowest border-l-2 border-primary">
+						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-secondary mb-4">
+							Velocity
+						</h4>
+						<h3 className="font-approachable text-xl font-bold mb-3 leading-tight">
+							Rapid Execution
+						</h3>
+						<p className="font-approachable text-sm text-on-surface-variant opacity-80">
+							Products built and ready within weeks.
+						</p>
+					</div>
 				</div>
 			</div>
 		</section>

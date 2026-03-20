@@ -1,7 +1,7 @@
 import { Features } from "@marketing/home/components/Features";
 import { Hero } from "@marketing/home/components/Hero";
-import { Newsletter } from "@marketing/home/components/Newsletter";
 import Industries from "@marketing/home/components/Industries";
+import { Newsletter } from "@marketing/home/components/Newsletter";
 import Process from "@marketing/home/components/Process";
 import Team from "@marketing/home/components/Team";
 import { setRequestLocale } from "next-intl/server";
@@ -17,8 +17,8 @@ export default async function Home({
 	return (
 		<>
 			<Hero />
-			<Features />
 			<Industries />
+			<Features />
 			<Process />
 			<Team />
 			<Newsletter />

@@ -1,48 +1,45 @@
-import heroImage from "@public/images/hero-image.png";
-import heroImageDark from "@public/images/hero-image-dark.png";
-import { Button } from "@repo/ui/button";
-import { ArrowRightIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-
 export function Hero() {
 	return (
-		<div className="relative max-w-full overflow-x-hidden bg-card">
-			<div className="container relative z-20 pt-44 pb-12 lg:pb-16">
-				<h1 className="text-balance font-medium text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tighter font-serif text-foreground">
-					AI Infrastructure for Traditional Industries
-				</h1>
-
-				<p className="mt-2 text-foreground/60 text-sm sm:text-lg">
-					SashFlow builds AI-powered products for industries like
-					HVAC, Legal, Healthcare, Real Estate, and Insurance — from
-					concept to application-ready in 4 weeks.
-				</p>
-
-				<div className="mt-4 flex items-center justify-start gap-2">
-					<Button size="lg" variant="default" asChild>
-						<Link href="/contact">
-							Get started
-							<ArrowRightIcon className="ml-2 size-4" />
-						</Link>
-					</Button>
+		<section className="px-8 max-w-7xl mx-auto mb-32 lg:mb-48 relative">
+			<div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+				<div className="lg:col-span-8">
+					<span className="inline-block bg-tertiary-fixed text-on-tertiary-container px-3 py-1 mb-6 text-[10px] font-bold uppercase tracking-[0.1em]">
+						Kinetic Infrastructure v1.0
+					</span>
+					<h1 className="editorial-headline text-6xl md:text-8xl lg:text-9xl mb-8 text-on-surface">
+						AI Infrastructure
+						<br />
+						for Traditional
+						<br />
+						<span className="text-primary">Industries</span>
+					</h1>
 				</div>
-
-				<div className="mx-auto mt-12 lg:mt-16 xl:mt-24 lg:flex-1 rounded-4xl bg-primary/10 p-4 lg:p-6">
-					<Image
-						src={heroImage}
-						alt="Our application"
-						className="block rounded-xl dark:hidden"
-						priority
-					/>
-					<Image
-						src={heroImageDark}
-						alt="Our application"
-						className="hidden rounded-xl dark:block"
-						priority
-					/>
+				<div className="lg:col-span-4 pb-4">
+					<p className="font-approachable text-lg leading-relaxed text-on-surface-variant mb-8 border-l-4 border-secondary pl-6">
+						SashFlow builds AI-powered products for industries like
+						HVAC, Legal, Healthcare, Real Estate, and Insurance —
+						from concept to application-ready in 4 weeks.
+					</p>
+					<div className="flex flex-wrap gap-4">
+						<button
+							type="button"
+							className="bg-primary text-on-primary px-8 py-4 font-approachable font-bold uppercase text-sm tracking-widest hover:brightness-110 transition-all"
+						>
+							Get in Touch
+						</button>
+						<button
+							type="button"
+							className="bg-surface-container-highest text-on-surface px-8 py-4 font-approachable font-bold uppercase text-sm tracking-widest hover:bg-surface-variant transition-all"
+						>
+							See What We Build
+						</button>
+					</div>
+					<p className="mt-8 font-approachable text-xs font-semibold uppercase tracking-widest opacity-60">
+						Built by a team with 25+ years of combined experience.
+					</p>
 				</div>
 			</div>
-		</div>
+			<div className="absolute -z-10 top-0 right-0 w-1/3 h-full bg-gradient-to-br from-primary/5 to-transparent opacity-50 blur-3xl" />
+		</section>
 	);
 }

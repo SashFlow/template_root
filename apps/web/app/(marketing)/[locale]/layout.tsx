@@ -47,7 +47,9 @@ export default async function MarketingLayout({
 					<NextIntlClientProvider locale={locale} messages={messages}>
 						<SessionProvider>
 							<NavBar />
-							<main className="min-h-screen">{children}</main>
+							<main className="min-h-screen pt-32">
+								{children}
+							</main>
 							<Footer />
 						</SessionProvider>
 					</NextIntlClientProvider>

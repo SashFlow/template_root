@@ -1,19 +1,10 @@
 "use client";
 
-import { config } from "@repo/config";
-import { Button } from "@repo/ui/button";
-// import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@repo/ui/sheet";
-import { cn } from "@repo/ui/utils";
 import { useSession } from "@saas/auth/hooks/use-session";
-import { ColorModeToggle } from "@shared/components/ColorModeToggle";
-import { LocaleSwitch } from "@shared/components/LocaleSwitch";
-import { Logo } from "@shared/components/Logo";
-// import { MenuIcon } from "lucide-react";
-import NextLink from "next/link";
 import { useTranslations } from "next-intl";
-import { Suspense, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDebounceCallback } from "usehooks-ts";
-import { LocaleLink, useLocalePathname } from "../../../../i18n/routing";
+import { useLocalePathname } from "../../../../i18n/routing";
 
 export function NavBar() {
 	const t = useTranslations();
@@ -67,127 +58,37 @@ export function NavBar() {
 	const isMenuItemActive = (href: string) => localePathname.startsWith(href);
 
 	return (
-		<nav
-			className={cn(
-				"fixed top-0 left-0 z-50 w-full transition-shadow duration-200 bg-card",
-			)}
-			data-test="navigation"
-		>
-			<div className="container">
-				<div
-					className={cn(
-						"flex items-center justify-stretch gap-6 transition-[padding] duration-200",
-						!isTop || isDocsPage ? "py-4" : "py-6",
-					)}
-				>
-					<div className="flex flex-1 justify-start">
-						<LocaleLink
-							href="/"
-							className="block hover:no-underline active:no-underline"
-						>
-							<Logo />
-						</LocaleLink>
-					</div>
-
-					<div className="hidden flex-1 items-center justify-center lg:flex">
-						{menuItems.map((menuItem) => (
-							<LocaleLink
-								key={menuItem.href}
-								href={menuItem.href}
-								className={cn(
-									"block px-3 py-2 font-medium text-foreground/80 text-sm",
-									isMenuItemActive(menuItem.href)
-										? "font-bold text-foreground"
-										: "",
-								)}
-								prefetch
-							>
-								{menuItem.label}
-							</LocaleLink>
-						))}
-					</div>
-
-					<div className="flex flex-1 items-center justify-end gap-3">
-						<ColorModeToggle />
-						{config.i18n.enabled && (
-							<Suspense>
-								<LocaleSwitch />
-							</Suspense>
-						)}
-
-						{/* <Sheet
-							open={mobileMenuOpen}
-							onOpenChange={(open) => setMobileMenuOpen(open)}
-						>
-							<SheetTrigger asChild>
-								<Button
-									className="lg:hidden"
-									size="icon"
-									variant="destructive"
-									aria-label="Menu"
-								>
-									<MenuIcon className="size-4" />
-								</Button>
-							</SheetTrigger>
-							<SheetContent className="w-[280px]" side="right">
-								<SheetTitle />
-								<div className="flex flex-col items-start justify-center">
-									{menuItems.map((menuItem) => (
-										<LocaleLink
-											key={menuItem.href}
-											href={menuItem.href}
-											onClick={handleMobileMenuClose}
-											className={cn(
-												"block px-3 py-2 font-medium text-base text-foreground/80",
-												isMenuItemActive(menuItem.href)
-													? "font-bold text-foreground"
-													: "",
-											)}
-											prefetch
-										>
-											{menuItem.label}
-										</LocaleLink>
-									))}
-
-									<NextLink
-										href={"/contact"}
-										className="block px-3 py-2 text-white bg-primary rounded-md mt-4"
-										onClick={handleMobileMenuClose}
-										prefetch={!user}
-									>
-										{t("common.menu.contact")}
-									</NextLink>
-								</div>
-							</SheetContent>
-						</Sheet> */}
-
-						{config.ui.saas.enabled &&
-							(user ? (
-								<Button
-									key="dashboard"
-									className="hidden lg:flex"
-									asChild
-									variant="secondary"
-								>
-									<NextLink href="/app">
-										{t("common.menu.dashboard")}
-									</NextLink>
-								</Button>
-							) : (
-								<Button
-									key="login"
-									className="hidden lg:flex"
-									asChild
-									variant="default"
-									disabled={!config.contactForm.enabled}
-								>
-									<NextLink href="/contact" prefetch>
-										{t("common.menu.contact")}
-									</NextLink>
-								</Button>
-							))}
-					</div>
+		<nav className="fixed top-0 w-full z-50 shadow-[0_8px_32px_rgba(27,28,24,0.04)]">
+			<div className="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+				<div className="text-2xl font-black tracking-tighter text-foreground uppercase font-industrial">
+					SashFlow
 				</div>
+				<div className="hidden md:flex items-center gap-10">
+					<a
+						className="text-primary border-b-2 border-primary pb-1 font-approachable text-sm font-bold uppercase tracking-wider"
+						href="#about"
+					>
+						About
+					</a>
+					<a
+						className="text-foreground opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300 font-approachable text-sm uppercase tracking-wider"
+						href="#industries"
+					>
+						Industries
+					</a>
+					<a
+						className="text-foreground opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300 font-approachable text-sm uppercase tracking-wider"
+						href="#contact"
+					>
+						Contact
+					</a>
+				</div>
+				<button
+					type="button"
+					className="bg-primary text-primary-foreground px-6 py-2.5 font-approachable font-bold uppercase text-xs tracking-widest hover:scale-105 active:scale-95 transition-all duration-150"
+				>
+					Get Started
+				</button>
 			</div>
 		</nav>
 	);

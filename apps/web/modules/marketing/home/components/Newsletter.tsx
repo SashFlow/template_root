@@ -1,12 +1,8 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Alert, AlertDescription, AlertTitle } from "@repo/ui/alert";
-import { Button } from "@repo/ui/button";
-import { Input } from "@repo/ui/input";
 import { orpc } from "@shared/lib/orpc-query-utils";
 import { useMutation } from "@tanstack/react-query";
-import { CheckCircleIcon, KeyIcon } from "lucide-react";
 
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
@@ -38,56 +34,30 @@ export function Newsletter() {
 	});
 
 	return (
-		<section className="pb-12 lg:pb-16 xl:pb-24">
-			<div className="container max-w-3xl">
-				<div className="p-6 bg-primary/5 rounded-4xl lg:p-8">
-					<div className="mb-8 text-center">
-						<KeyIcon className="mx-auto mb-3 size-10 text-primary" />
-						<h1 className="font-serif font-medium text-lg md:text-xl lg:text-2xl xl:text-3xl leading-tighter text-foreground">
-							{t("newsletter.title")}
-						</h1>
-						<p className="mt-2 text-foreground/60 text-sm sm:text-base">
-							{t("newsletter.subtitle")}
-						</p>
+		<section className="py-32 px-8" id="contact">
+			<div className="max-w-7xl mx-auto bg-primary p-16 md:p-32 relative overflow-hidden">
+				<div className="relative z-10 text-center lg:text-left grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+					<div>
+						<h2 className="editorial-headline text-surface text-5xl md:text-7xl mb-8">
+							Let's Build Something That Serves an Entire Industry
+						</h2>
+						<a
+							className="font-approachable text-2xl text-tertiary-fixed font-bold hover:underline decoration-2 underline-offset-8"
+							href="mailto:hello@sashflow.com"
+						>
+							hello@sashflow.com
+						</a>
 					</div>
-
-					<div className="mx-auto max-w-lg">
-						{form.formState.isSubmitSuccessful ? (
-							<Alert variant="success">
-								<CheckCircleIcon />
-								<AlertTitle>
-									{t("newsletter.hints.success.title")}
-								</AlertTitle>
-								<AlertDescription>
-									{t("newsletter.hints.success.message")}
-								</AlertDescription>
-							</Alert>
-						) : (
-							<form onSubmit={onSubmit}>
-								<div className="flex items-center gap-2">
-									<Input
-										type="email"
-										required
-										placeholder={t("newsletter.email")}
-										{...form.register("email")}
-									/>
-
-									<Button
-										type="submit"
-										loading={form.formState.isSubmitting}
-									>
-										{t("newsletter.submit")}
-									</Button>
-								</div>
-								{form.formState.errors.email && (
-									<p className="mt-1 text-destructive text-xs">
-										{form.formState.errors.email.message}
-									</p>
-								)}
-							</form>
-						)}
+					<div className="flex justify-center lg:justify-end">
+						<button
+							type="button"
+							className="bg-surface text-primary px-12 py-6 font-approachable font-black uppercase text-lg tracking-widest hover:bg-surface-bright transition-all shadow-2xl"
+						>
+							Get in Touch
+						</button>
 					</div>
 				</div>
+				<div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/20 to-transparent" />
 			</div>
 		</section>
 	);
