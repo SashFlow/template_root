@@ -6,6 +6,7 @@ import Research from '@assets/lottie/Research.json';
 import Deploy from '@assets/lottie/Deployment.json';
 import Develop from '@assets/lottie/Develop.json';
 import Design from '@assets/lottie/Design.json';
+import { FadeUp } from "../shared/Motion";
 
 const Process = () => {
 	const [activeStep, setActiveStep] = useState(1);
@@ -21,15 +22,15 @@ const Process = () => {
 	return (
 		<section className="bg-accent py-32 px-8 text-accent-foreground overflow-hidden">
 			<div className="max-w-7xl mx-auto">
-				<div className="mb-20">
+				<FadeUp className="mb-20">
 					<h2 className="editorial-headline text-5xl md:text-6xl mb-6 uppercase">
 						From Concept to Product
 					</h2>
 					<p className="font-approachable text-primary-foreground/80 uppercase tracking-widest text-xs font-bold">
 						Fast execution without compromising product quality.
 					</p>
-				</div>
-				<div className="flex flex-col gap-4">
+				</FadeUp>
+				<FadeUp className="flex flex-col gap-4">
 					<div className="lg:col-span-7 bg-background backdrop-blur-sm relative overflow-hidden flex items-center justify-center p-12 visual-container rounded-[16px]">
 						<div
 							className={`visual-content flex-col items-center gap-8 w-full max-h-[500px] justify-center ${activeStep === 1 ? "" : "hidden"} ${animatingStep === 1 ? "active" : ""}`}
@@ -158,7 +159,7 @@ const Process = () => {
 							</p>
 						</button>
 					</div>
-				</div>
+				</FadeUp>
 			</div>
 		</section>
 	);

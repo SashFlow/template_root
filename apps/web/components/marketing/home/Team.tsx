@@ -1,3 +1,5 @@
+import { FadeUp } from "../shared/Motion";
+
 const founders = [
 	{
 		name: "Founder 1",
@@ -32,7 +34,7 @@ const founders = [
 const Team = () => {	
 	return (
 		<section className="py-32 px-8 	bg-secondary-foreground/80">
-			<div className="max-w-3xl mx-auto text-center">
+			<FadeUp className="max-w-3xl mx-auto text-center">
 				<span className="inline-block bg-primary text-on-primary px-4 py-1 mb-10 text-[10px] font-bold uppercase tracking-[0.2em]">
 					The Team
 				</span>
@@ -49,7 +51,7 @@ const Team = () => {
 						and multiple sectors.
 					</p>
 				</div>
-			</div>
+			</FadeUp>
 		</section>
 	);
 };

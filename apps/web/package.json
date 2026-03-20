@@ -33,6 +33,7 @@
 		"date-fns": "^4.1.0",
 		"deepmerge": "^4.3.1",
 		"es-toolkit": "^1.41.0",
+		"framer-motion": "^12.38.0",
 		"fumadocs-core": "^16.0.11",
 		"fumadocs-ui": "^16.0.11",
 		"hono": "^4.10.5",

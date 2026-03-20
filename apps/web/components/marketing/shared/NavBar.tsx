@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export function NavBar() {
 	return (
 		<nav className="fixed bg-background top-0 w-full z-50 shadow-[0_8px_32px_rgba(27,28,24,0.04)]">
@@ -8,31 +10,31 @@ export function NavBar() {
 					Sash<span className="text-primary">Flow</span>
 				</div>
 				<div className="hidden md:flex items-center gap-10">
-					<a
+					<Link
 						className="text-primary border-b-2 border-primary pb-1 font-approachable text-sm font-bold uppercase tracking-wider"
 						href="#about"
 					>
 						About
-					</a>
-					<a
+					</Link>
+					<Link
 						className="text-foreground opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300 font-approachable text-sm uppercase tracking-wider"
 						href="#industries"
 					>
 						Industries
-					</a>
-					<a
+					</Link>
+					<Link
 						className="text-foreground opacity-80 hover:opacity-100 hover:text-primary transition-all duration-300 font-approachable text-sm uppercase tracking-wider"
 						href="#contact"
 					>
 						Contact
-					</a>
+					</Link>
 				</div>
-				<button
-					type="button"
-					className="bg-primary text-primary-foreground px-6 py-2.5 font-approachable font-bold uppercase text-xs tracking-widest hover:scale-105 active:scale-95 transition-all duration-150"
+				<Link
+					href="/contact"
+					className="bg-primary text-primary-foreground px-6 py-2.5 font-approachable font-bold uppercase text-xs tracking-widest hover:scale-105 active:scale-95 transition-all duration-150 inline-block text-center"
 				>
 					Get Started
-				</button>
+				</Link>
 			</div>
 		</nav>
 	);

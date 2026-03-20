@@ -7,6 +7,8 @@ import { useMutation } from "@tanstack/react-query";
 import { useTranslations } from "next-intl";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import Link from "next/link";
+import { FadeUp } from "../shared/Motion";
 
 const formSchema = z.object({
 	email: z.string().email(),
@@ -35,7 +37,7 @@ export function Newsletter() {
 
 	return (
 		<section className="py-32 px-8" id="contact">
-			<div className="max-w-7xl mx-auto bg-primary p-16 md:p-32 relative overflow-hidden">
+			<FadeUp className="max-w-7xl mx-auto bg-primary p-16 md:p-32 relative overflow-hidden">
 				<div className="relative z-10 text-center lg:text-left grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 					<div>
 						<h2 className="editorial-headline text-primary-foreground text-5xl md:text-7xl mb-8 uppercase">
@@ -49,16 +51,16 @@ export function Newsletter() {
 						</a>
 					</div>
 					<div className="flex justify-center lg:justify-end">
-						<button
-							type="button"
-							className="bg-primary-foreground text-primary px-12 py-6 font-approachable font-black uppercase text-lg tracking-widest hover:bg-surface-bright transition-all shadow-2xl"
+						<Link
+							href="/contact"
+							className="bg-primary-foreground text-primary px-12 py-6 font-approachable font-black uppercase text-lg tracking-widest hover:bg-surface-bright transition-all shadow-2xl inline-block text-center"
 						>
 							Get in Touch
-						</button>
+						</Link>
 					</div>
 				</div>
 				<div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-black/20 to-transparent" />
-			</div>
+			</FadeUp>
 		</section>
 	);
 }

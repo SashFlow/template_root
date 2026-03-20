@@ -6,6 +6,8 @@ import { CloudIcon, ComputerIcon, StarIcon, WandIcon } from "lucide-react";
 import type { StaticImageData } from "next/image";
 import type { JSXElementConstructor, ReactNode } from "react";
 
+import { FadeUp } from "../shared/Motion";
+
 export const featureTabs: Array<{
 	id: string;
 	title: string;
@@ -92,9 +94,9 @@ export const featureTabs: Array<{
 
 export function Features() {
 	return (
-		<section className="py-32 px-8">
+		<section id="features" className="py-32 px-8">
 			<div className="max-w-7xl mx-auto">
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<FadeUp className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 					<div className="p-8 bg-card border-l-2 border-primary">
 						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-accent mb-4">
 							Foundation
@@ -139,7 +141,7 @@ export function Features() {
 							Products built and ready within weeks.
 						</p>
 					</div>
-				</div>
+				</FadeUp>
 			</div>
 		</section>
 	);

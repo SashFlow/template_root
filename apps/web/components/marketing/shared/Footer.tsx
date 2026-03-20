@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
 	return (
 		<footer className="bg-accent w-full py-16 px-8 text-surface">
@@ -11,24 +13,24 @@ export function Footer() {
 					</p>
 				</div>
 				<div className="flex gap-12">
-					<a
+					<Link
 						className="font-approachable text-xs tracking-[+0.04em] uppercase text-tertiary-fixed font-bold"
 						href="#about"
 					>
 						About
-					</a>
-					<a
+					</Link>
+					<Link
 						className="font-approachable text-xs tracking-[+0.04em] uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors"
 						href="#industries"
 					>
 						Industries
-					</a>
-					<a
+					</Link>
+					<Link
 						className="font-approachable text-xs tracking-[+0.04em] uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors"
 						href="#contact"
 					>
 						Contact
-					</a>
+					</Link>
 				</div>
 			</div>
 			<div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-surface/10 flex flex-col md:flex-row justify-between items-center gap-4">
