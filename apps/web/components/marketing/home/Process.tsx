@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Player } from '@lottiefiles/react-lottie-player';
+import dynamic from "next/dynamic";
+const Player = dynamic(() => import('@lottiefiles/react-lottie-player').then(mod => mod.Player), { ssr: false });
 import Research from '@assets/lottie/Research.json';
 import Deploy from '@assets/lottie/Deployment.json';
 import Develop from '@assets/lottie/Develop.json';
