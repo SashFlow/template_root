@@ -2,13 +2,13 @@
 
 import { config } from "@repo/config";
 import { Button } from "@repo/ui/button";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@repo/ui/sheet";
+// import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@repo/ui/sheet";
 import { cn } from "@repo/ui/utils";
 import { useSession } from "@saas/auth/hooks/use-session";
 import { ColorModeToggle } from "@shared/components/ColorModeToggle";
 import { LocaleSwitch } from "@shared/components/LocaleSwitch";
 import { Logo } from "@shared/components/Logo";
-import { MenuIcon } from "lucide-react";
+// import { MenuIcon } from "lucide-react";
 import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 import { Suspense, useEffect, useState } from "react";
@@ -54,14 +54,14 @@ export function NavBar() {
 		label: string;
 		href: string;
 	}[] = [
-		{
-			label: t("common.menu.team"),
-			href: "/#team",
-		},
-		{
-			label: t("common.menu.blog"),
-			href: "/blog",
-		},
+		// {
+		// 	label: t("common.menu.team"),
+		// 	href: "/#team",
+		// },
+		// {
+		// 	label: t("common.menu.blog"),
+		// 	href: "/blog",
+		// },
 	];
 
 	const isMenuItemActive = (href: string) => localePathname.startsWith(href);
@@ -115,7 +115,7 @@ export function NavBar() {
 							</Suspense>
 						)}
 
-						<Sheet
+						{/* <Sheet
 							open={mobileMenuOpen}
 							onOpenChange={(open) => setMobileMenuOpen(open)}
 						>
@@ -154,12 +154,12 @@ export function NavBar() {
 										className="block px-3 py-2 text-white bg-primary rounded-md mt-4"
 										onClick={handleMobileMenuClose}
 										prefetch={!user}
-										>
+									>
 										{t("common.menu.contact")}
 									</NextLink>
 								</div>
 							</SheetContent>
-						</Sheet>
+						</Sheet> */}
 
 						{config.ui.saas.enabled &&
 							(user ? (

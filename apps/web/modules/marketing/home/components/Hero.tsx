@@ -4,7 +4,6 @@ import { Button } from "@repo/ui/button";
 import { ArrowRightIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { LocaleLink } from "../../../../i18n/routing";
 
 export function Hero() {
 	return (
@@ -15,9 +14,9 @@ export function Hero() {
 				</h1>
 
 				<p className="mt-2 text-foreground/60 text-sm sm:text-lg">
-					SashFlow builds AI-powered products for industries like HVAC, Legal,
-					Healthcare, Real Estate, and Insurance — from concept to
-					application-ready in 4 weeks.
+					SashFlow builds AI-powered products for industries like
+					HVAC, Legal, Healthcare, Real Estate, and Insurance — from
+					concept to application-ready in 4 weeks.
 				</p>
 
 				<div className="mt-4 flex items-center justify-start gap-2">

@@ -1,14 +1,7 @@
 "use client";
 
-import { Button } from "@repo/ui/button";
-import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuRadioGroup,
-	DropdownMenuRadioItem,
-	DropdownMenuTrigger,
-} from "@repo/ui/dropdown-menu";
-import { HardDriveIcon, MoonIcon, SunIcon } from "lucide-react";
+import { Toggle } from "@repo/ui/toggle";
+import { MoonIcon, SunIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useState } from "react";
 import { useIsClient } from "usehooks-ts";
@@ -31,47 +24,27 @@ export function ColorModeToggle() {
 		},
 	];
 
+	const toggleTheme = () => {
+		if (resolvedTheme === "light") {
+			setTheme("dark");
+			setValue("dark");
+		} else {
+			setTheme("light");
+			setValue("light");
+		}
+	};
+
 	if (!isClient) {
 		return null;
 	}
 
 	return (
-		<DropdownMenu modal={false}>
-			<DropdownMenuTrigger asChild>
-				<Button
-					variant="ghost"
-					size="icon"
-					data-test="color-mode-toggle"
-					aria-label="Color mode"
-				>
-					{resolvedTheme === "light" ? (
-						<SunIcon className="size-4" />
-					) : (
-						<MoonIcon className="size-4" />
-					)}
-				</Button>
-			</DropdownMenuTrigger>
-
-			<DropdownMenuContent>
-				<DropdownMenuRadioGroup
-					value={value}
-					onValueChange={(value) => {
-						setTheme(value);
-						setValue(value);
-					}}
-				>
-					{colorModeOptions.map((option) => (
-						<DropdownMenuRadioItem
-							key={option.value}
-							value={option.value}
-							data-test={`color-mode-toggle-item-${option.value}`}
-						>
-							<option.icon className="mr-2 size-4 opacity-50" />{" "}
-							{option.label}
-						</DropdownMenuRadioItem>
-					))}
-				</DropdownMenuRadioGroup>
-			</DropdownMenuContent>
-		</DropdownMenu>
+		<Toggle onClick={toggleTheme} aria-label="Toggle color mode">
+			{resolvedTheme === "light" ? (
+				<SunIcon className="size-4" />
+			) : (
+				<MoonIcon className="size-4" />
+			)}
+		</Toggle>
 	);
 }
