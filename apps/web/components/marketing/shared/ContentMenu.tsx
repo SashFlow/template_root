@@ -1,5 +1,5 @@
 import type { ContentStructureItem } from "@shared/lib/content";
-import { LocaleLink } from "../../../../i18n/routing";
+import { LocaleLink } from "@i18n/routing";
 
 function ContentMenuItem({
 	label,
