@@ -100,6 +100,7 @@ input[cmdk-input] {
 	--color-secondary: var(--secondary);
 	--color-primary-foreground: var(--primary-foreground);
 	--color-primary: var(--primary);
+	--color-tertiary-fixed: var(--tertiary-fixed);
 	--color-popover-foreground: var(--popover-foreground);
 	--color-popover: var(--popover);
 	--color-card-foreground: var(--card-foreground);
@@ -119,9 +120,10 @@ input[cmdk-input] {
 }
 
 :root {
+	--tertiary-fixed: rgb(245 228 111);
 	--background: oklch(0.9583 0.0070 88.6431);
 	--foreground: oklch(0.2046 0 0);
-	--card: oklch(0.9583 0.0070 88.6431);
+	--card: oklch(100% 0.00011 271.152);
 	--card-foreground: oklch(0.2046 0 0);
 	--popover: oklch(0.9583 0.0070 88.6431);
 	--popover-foreground: oklch(0.2046 0 0);
@@ -175,6 +177,7 @@ input[cmdk-input] {
 }
 
 .dark {
+	--tertiary-fixed: rgb(245 228 111);
 	--background: oklch(0.2046 0 0);
 	--foreground: oklch(0.9583 0.0070 88.6431);
 	--card: oklch(0.2393 0 0);

@@ -29,14 +29,14 @@ const founders = [
 	},
 ];
 
-const Team = () => {
+const Team = () => {	
 	return (
-		<section className="py-32 px-8 bg-surface-container-high">
+		<section className="py-32 px-8 	bg-secondary-foreground/80">
 			<div className="max-w-3xl mx-auto text-center">
 				<span className="inline-block bg-primary text-on-primary px-4 py-1 mb-10 text-[10px] font-bold uppercase tracking-[0.2em]">
 					The Team
 				</span>
-				<h2 className="editorial-headline text-5xl mb-12">
+				<h2 className="editorial-headline text-5xl mb-12 uppercase text-foreground">
 					About SashFlow
 				</h2>
 				<div className="space-y-6 font-approachable text-xl leading-relaxed text-on-surface">

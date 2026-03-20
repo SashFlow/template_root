@@ -1,12 +1,12 @@
 export function Footer() {
 	return (
-		<footer className="bg-secondary w-full py-16 px-8 text-surface">
+		<footer className="bg-accent w-full py-16 px-8 text-surface">
 			<div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 max-w-7xl mx-auto">
 				<div>
-					<div className="text-3xl font-black text-surface font-industrial uppercase tracking-tighter mb-2">
+					<div className="text-3xl font-black text-primary-foreground font-industrial uppercase tracking-tighter mb-2">
 						SashFlow
 					</div>
-					<p className="font-approachable text-xs tracking-wide text-surface/60 uppercase">
+					<p className="font-approachable text-xs tracking-wide text-primary-foreground/60 uppercase">
 						AI infrastructure for industries.
 					</p>
 				</div>
@@ -18,13 +18,13 @@ export function Footer() {
 						About
 					</a>
 					<a
-						className="font-approachable text-xs tracking-[+0.04em] uppercase text-surface/70 hover:text-surface transition-colors"
+						className="font-approachable text-xs tracking-[+0.04em] uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors"
 						href="#industries"
 					>
 						Industries
 					</a>
 					<a
-						className="font-approachable text-xs tracking-[+0.04em] uppercase text-surface/70 hover:text-surface transition-colors"
+						className="font-approachable text-xs tracking-[+0.04em] uppercase text-primary-foreground/70 hover:text-primary-foreground transition-colors"
 						href="#contact"
 					>
 						Contact

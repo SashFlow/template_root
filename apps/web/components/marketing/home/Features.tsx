@@ -95,8 +95,8 @@ export function Features() {
 		<section className="py-32 px-8">
 			<div className="max-w-7xl mx-auto">
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					<div className="p-8 bg-surface-container-lowest border-l-2 border-primary">
-						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-secondary mb-4">
+					<div className="p-8 bg-card border-l-2 border-primary">
+						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-accent mb-4">
 							Foundation
 						</h4>
 						<h3 className="font-approachable text-xl font-bold mb-3 leading-tight">
@@ -106,8 +106,8 @@ export function Features() {
 							Across AI, automation, and industry operations.
 						</p>
 					</div>
-					<div className="p-8 bg-surface-container-lowest border-l-2 border-primary">
-						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-secondary mb-4">
+					<div className="p-8 bg-card border-l-2 border-primary">
+						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-accent mb-4">
 							Context
 						</h4>
 						<h3 className="font-approachable text-xl font-bold mb-3 leading-tight">
@@ -117,8 +117,8 @@ export function Features() {
 							We understand how real industries operate.
 						</p>
 					</div>
-					<div className="p-8 bg-surface-container-lowest border-l-2 border-primary">
-						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-secondary mb-4">
+					<div className="p-8 bg-card border-l-2 border-primary">
+						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-accent mb-4">
 							Capability
 						</h4>
 						<h3 className="font-approachable text-xl font-bold mb-3 leading-tight">
@@ -128,8 +128,8 @@ export function Features() {
 							From model design to production systems.
 						</p>
 					</div>
-					<div className="p-8 bg-surface-container-lowest border-l-2 border-primary">
-						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-secondary mb-4">
+					<div className="p-8 bg-card border-l-2 border-primary">
+						<h4 className="font-approachable font-bold uppercase text-xs tracking-[0.2em] text-accent mb-4">
 							Velocity
 						</h4>
 						<h3 className="font-approachable text-xl font-bold mb-3 leading-tight">

@@ -1,9 +1,9 @@
-import { Features } from "@marketing/home/components/Features";
-import { Hero } from "@marketing/home/components/Hero";
-import Industries from "@marketing/home/components/Industries";
-import { Newsletter } from "@marketing/home/components/Newsletter";
-import Process from "@marketing/home/components/Process";
-import Team from "@marketing/home/components/Team";
+import { Features } from "@components/marketing/home/Features";
+import { Hero } from "@components/marketing/home/Hero";
+import Industries from "@components/marketing/home/Industries";
+import { Newsletter } from "@components/marketing/home/Newsletter";
+import Process from "@components/marketing/home/Process";
+import Team from "@components/marketing/home/Team";
 import { setRequestLocale } from "next-intl/server";
 
 export default async function Home({

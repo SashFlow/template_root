@@ -38,7 +38,7 @@ export function Newsletter() {
 			<div className="max-w-7xl mx-auto bg-primary p-16 md:p-32 relative overflow-hidden">
 				<div className="relative z-10 text-center lg:text-left grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 					<div>
-						<h2 className="editorial-headline text-surface text-5xl md:text-7xl mb-8">
+						<h2 className="editorial-headline text-primary-foreground text-5xl md:text-7xl mb-8 uppercase">
 							Let's Build Something That Serves an Entire Industry
 						</h2>
 						<a
@@ -51,13 +51,13 @@ export function Newsletter() {
 					<div className="flex justify-center lg:justify-end">
 						<button
 							type="button"
-							className="bg-surface text-primary px-12 py-6 font-approachable font-black uppercase text-lg tracking-widest hover:bg-surface-bright transition-all shadow-2xl"
+							className="bg-primary-foreground text-primary px-12 py-6 font-approachable font-black uppercase text-lg tracking-widest hover:bg-surface-bright transition-all shadow-2xl"
 						>
 							Get in Touch
 						</button>
 					</div>
 				</div>
-				<div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-black/20 to-transparent" />
+				<div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-black/20 to-transparent" />
 			</div>
 		</section>
 	);

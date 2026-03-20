@@ -4,6 +4,7 @@
 		"plugins": [{ "name": "next" }],
 		"paths": {
 			"@app/*": ["./app/*"],
+			"@assets/*": ["./assets/*"],
 			"@constants": ["./constants/index.ts"],
 			"@constants/*": ["./constants/*"],
 			"@components/*": ["./components/*"],
