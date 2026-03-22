@@ -4,7 +4,8 @@ import { useState } from "react";
 import { height } from "../anim";
 import Body from "./Body";
 import Footer from "./Footer";
-import Image from "./Image";
+
+// import Image from "./Image";
 
 const links = [
 	{
@@ -34,7 +35,7 @@ const links = [
 	},
 ];
 
-export default function Index() {
+export default function NavContent({ onClose }: { onClose: () => void }) {
 	const [selectedLink, setSelectedLink] = useState({
 		isActive: false,
 		index: 0,
@@ -54,13 +55,14 @@ export default function Index() {
 						links={links}
 						selectedLink={selectedLink}
 						setSelectedLink={setSelectedLink}
+						onClose={onClose}
 					/>
-					<Footer />
+					<Footer onClose={onClose} />
 				</div>
-				<Image
+				{/* <Image
 					src={links[selectedLink.index].src}
 					isActive={selectedLink.isActive}
-				/>
+				/> */}
 			</div>
 		</motion.div>
 	);

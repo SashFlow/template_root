@@ -2,25 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
-
-const strengths = [
-	{
-		title: "25+ Years Experience",
-		subheading: "Across AI, automation, and industry operations.",
-	},
-	{
-		title: "Industry Workflow Understanding",
-		subheading: "We understand how real industries operate.",
-	},
-	{
-		title: "AI Product Development",
-		subheading: "From model design to production systems.",
-	},
-	{
-		title: "Rapid Execution",
-		subheading: "Products built and ready within weeks.",
-	},
-];
+import { featuresStrengths } from "../../../constants";
 
 const Word = ({
 	children,
@@ -111,7 +93,7 @@ export function Features() {
 				</div>
 
 				<div className="relative z-20 h-full flex flex-col justify-around py-32">
-					{strengths.map((item, index) => {
+					{featuresStrengths.map((item, index) => {
 						const isLeft = index % 2 === 0;
 						return (
 							<div

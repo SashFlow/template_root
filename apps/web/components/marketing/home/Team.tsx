@@ -1,34 +1,9 @@
 "use client";
 import { AnimatedTestimonials } from "@components/marketing/shared/animated-testimonials";
 import { motion } from "framer-motion";
+import { teamMembers } from "../../../constants";
 
 function AnimatedTeam() {
-	const team = [
-		{
-			quote: "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-			name: "Sai Yalla",
-			designation: "Co-Founder & CEO",
-			src: "/images/sai.jpeg",
-		},
-		{
-			quote: "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-			name: "Sandip Patel",
-			designation: "Co-Founder & CPO",
-			src: "/images/sandip.jpeg",
-		},
-		{
-			quote: "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-			name: "Shipra Goyal",
-			designation: "Operations Director at CloudScale",
-			src: "/images/shipra.jpeg",
-		},
-		{
-			quote: "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-			name: "Sahil",
-			designation: "Co-Founder & CFO",
-			src: "/images/sahil.jpg",
-		},
-	];
 	return (
 		<section
 			id="team"
@@ -44,7 +19,7 @@ function AnimatedTeam() {
 				>
 					Meet the Team
 				</motion.h2>
-				<AnimatedTestimonials testimonials={team} autoplay />
+				<AnimatedTestimonials testimonials={teamMembers} autoplay />
 			</div>
 		</section>
 	);

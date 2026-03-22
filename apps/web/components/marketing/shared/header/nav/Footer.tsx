@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useTransitionRouter } from "next-transition-router";
 import { translate } from "../anim";
 
-export default function Footer() {
+export default function Footer({ onClose }: { onClose: () => void }) {
 	const router = useTransitionRouter();
 	return (
 		<div className="mt-10 flex flex-wrap items-end text-[12px] uppercase lg:justify-between">
@@ -13,7 +13,11 @@ export default function Footer() {
 					initial="initial"
 					animate="enter"
 					exit="exit"
-					onClick={() => router.push("/privacy-policy")}
+					onClick={() => {
+						router.push("/legal/privacy-policy");
+						onClose();
+					}}
+					className="cursor-pointer"
 				>
 					Privacy Policy
 				</motion.li>
@@ -25,7 +29,11 @@ export default function Footer() {
 					initial="initial"
 					animate="enter"
 					exit="exit"
-					onClick={() => router.push("/terms")}
+					onClick={() => {
+						router.push("/legal/terms");
+						onClose();
+					}}
+					className="cursor-pointer"
 				>
 					Terms & Conditions
 				</motion.li>

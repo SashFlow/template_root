@@ -13,10 +13,12 @@ export default function Body({
 	links,
 	selectedLink,
 	setSelectedLink,
+	onClose,
 }: {
 	links: LinkType[];
 	selectedLink: { isActive: boolean; index: number };
 	setSelectedLink: (val: { isActive: boolean; index: number }) => void;
+	onClose: () => void;
 }) {
 	const router = useTransitionRouter();
 
@@ -50,6 +52,7 @@ export default function Body({
 						onClick={(e) => {
 							e.preventDefault();
 							router.push(href);
+							onClose();
 						}}
 						className="text-black no-underline uppercase cursor-pointer"
 					>
