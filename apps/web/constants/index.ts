@@ -91,25 +91,25 @@ export const processStepsData = [
 
 export const teamMembers = [
 	{
-		quote: "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+		quote: "Our vision is to revolutionize vertical industries by bridging the gap between cutting-edge AI and real-world operational needs.",
 		name: "Sai Yalla",
 		designation: "Co-Founder & CEO",
 		src: "/images/sai.jpeg",
 	},
 	{
-		quote: "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+		quote: "Product excellence means building AI tools that are not just powerful, but deeply intuitive and tailored to the unique workflows of every industry.",
 		name: "Sandip Patel",
 		designation: "Co-Founder & CPO",
 		src: "/images/sandip.jpeg",
 	},
 	{
-		quote: "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+		quote: "We ensure our AI implementations deliver measurable financial growth and operational efficiency, providing a clear path to sustainable scaling.",
 		name: "Shipra Goyal",
-		designation: "Operations Director at CloudScale",
+		designation: "Co-Founder & CFO",
 		src: "/images/shipra.jpeg",
 	},
 	{
-		quote: "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+		quote: "Strategic automation allows businesses to optimize their capital and focus on high-impact goals, while we handle the complexity of the AI backbone.",
 		name: "Sahil",
 		designation: "Co-Founder & CFO",
 		src: "/images/sahil.jpg",

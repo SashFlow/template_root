@@ -106,11 +106,11 @@ export function Features() {
 							>
 								<AnimatedParagraph
 									text={item.title}
-									className="font-approachable text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-background"
+									className="font-approachable text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-foreground"
 								/>
 								<AnimatedParagraph
 									text={item.subheading}
-									className="font-approachable text-xl md:text-2xl text-background/70"
+									className="font-approachable text-xl md:text-2xl text-foreground/70"
 								/>
 							</div>
 						);

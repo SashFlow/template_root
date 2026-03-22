@@ -19,7 +19,7 @@ const Process = () => {
 
 	return (
 		<section className="bg-background">
-			<div className="bg-linear-to-b from-foreground via-accent to-foreground py-32 px-8 text-accent-foreground overflow-hidden rounded-3xl">
+			<div className="bg-linear-to-b from-background via-accent to-background py-32 px-8 text-accent-foreground overflow-hidden rounded-3xl">
 				<div className="max-w-7xl mx-auto">
 					<FadeUp className="mb-20">
 						<h2 className="editorial-headline text-5xl md:text-6xl mb-6 uppercase">
@@ -30,7 +30,7 @@ const Process = () => {
 						</p>
 					</FadeUp>
 					<FadeUp className="flex flex-col gap-4">
-						<div className="lg:col-span-7 bg-background backdrop-blur-sm relative overflow-hidden flex items-center justify-center p-8 md:p-12 visual-container rounded-[16px] min-h-[300px] sm:min-h-[400px] md:min-h-[500px]">
+						<div className="lg:col-span-7 bg-foreground backdrop-blur-sm relative overflow-hidden flex items-center justify-center p-8 md:p-12 visual-container rounded-[16px] min-h-[300px] sm:min-h-[400px] md:min-h-[500px]">
 							{/* Lottie Animation Focus */}
 							<div className="absolute inset-0 flex items-center justify-center p-6 md:p-12 pointer-events-none z-10">
 								<ProcessLottie activeStep={activeStep} />
