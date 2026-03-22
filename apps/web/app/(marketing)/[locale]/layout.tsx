@@ -1,5 +1,7 @@
 import { Footer } from "@components/marketing/shared/Footer";
-import { NavBar } from "@components/marketing/shared/NavBar";
+import Header from "@components/marketing/shared/header";
+import { SmoothScroll } from "@components/marketing/shared/SmoothScroll";
+import TransitionProvider from "@context/TransitionProvider";
 import { config } from "@repo/config";
 import { SessionProvider } from "@saas/auth/components/SessionProvider";
 import { Document } from "@shared/components/Document";
@@ -29,32 +31,38 @@ export default async function MarketingLayout({
 	}
 
 	const messages = await getMessages();
-
 	return (
 		<Document locale={locale}>
-			<FumadocsNextProvider>
-				<FumadocsRootProvider
-					search={{
-						enabled: true,
-						options: {
-							api: "/api/docs-search",
-						},
-					}}
-					i18n={{
-						locale,
-					}}
-				>
-					<NextIntlClientProvider locale={locale} messages={messages}>
-						<SessionProvider>
-							<NavBar />
-							<main className="min-h-screen pt-32">
-								{children}
-							</main>
-							<Footer />
-						</SessionProvider>
-					</NextIntlClientProvider>
-				</FumadocsRootProvider>
-			</FumadocsNextProvider>
+			<SmoothScroll>
+				<FumadocsNextProvider>
+					<FumadocsRootProvider
+						search={{
+							enabled: true,
+							options: {
+								api: "/api/docs-search",
+							},
+						}}
+						i18n={{
+							locale,
+						}}
+					>
+						<NextIntlClientProvider
+							locale={locale}
+							messages={messages}
+						>
+							<SessionProvider>
+								<TransitionProvider>
+									<Header />
+									<main className="min-h-screen">
+										{children}
+										<Footer />
+									</main>
+								</TransitionProvider>
+							</SessionProvider>
+						</NextIntlClientProvider>
+					</FumadocsRootProvider>
+				</FumadocsNextProvider>
+			</SmoothScroll>
 		</Document>
 	);
 }

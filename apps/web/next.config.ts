@@ -30,6 +30,11 @@ const nextConfig: NextConfig = {
 				protocol: "https",
 				hostname: "picsum.photos",
 			},
+			{
+				// aceternity images
+				protocol: "https",
+				hostname: "assets.aceternity.com",
+			},
 		],
 	},
 	async redirects() {

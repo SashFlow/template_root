@@ -1,59 +1,53 @@
-import { FadeUp } from "../shared/Motion";
+"use client";
+import { AnimatedTestimonials } from "@components/marketing/shared/animated-testimonials";
+import { motion } from "framer-motion";
 
-const founders = [
-	{
-		name: "Founder 1",
-		role: "CEO & AI Strategy",
-		initials: "F1",
-		index: 1,
-		image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&h=400&auto=format&fit=crop",
-	},
-	{
-		name: "Founder 2",
-		role: "CTO & Engineering",
-		initials: "F2",
-		index: 2,
-		image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&h=400&auto=format&fit=crop",
-	},
-	{
-		name: "Founder 3",
-		role: "COO & Operations",
-		initials: "F3",
-		index: 3,
-		image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400&h=400&auto=format&fit=crop",
-	},
-	{
-		name: "Founder 4",
-		role: "CPO & Product",
-		initials: "F4",
-		index: 4,
-		image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&h=400&auto=format&fit=crop",
-	},
-];
-
-const Team = () => {	
+function AnimatedTeam() {
+	const team = [
+		{
+			quote: "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+			name: "Sai Yalla",
+			designation: "Co-Founder & CEO",
+			src: "/images/sai.jpeg",
+		},
+		{
+			quote: "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+			name: "Sandip Patel",
+			designation: "Co-Founder & CPO",
+			src: "/images/sandip.jpeg",
+		},
+		{
+			quote: "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+			name: "Shipra Goyal",
+			designation: "Operations Director at CloudScale",
+			src: "/images/shipra.jpeg",
+		},
+		{
+			quote: "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+			name: "Sahil",
+			designation: "Co-Founder & CFO",
+			src: "/images/sahil.jpg",
+		},
+	];
 	return (
-		<section className="py-32 px-8 	bg-secondary-foreground/80">
-			<FadeUp className="max-w-3xl mx-auto text-center">
-				<span className="inline-block bg-primary text-on-primary px-4 py-1 mb-10 text-[10px] font-bold uppercase tracking-[0.2em]">
-					The Team
-				</span>
-				<h2 className="editorial-headline text-5xl mb-12 uppercase text-foreground">
-					About SashFlow
-				</h2>
-				<div className="space-y-6 font-approachable text-xl leading-relaxed text-on-surface">
-					<p>
-						SashFlow is a team of four builders focused on creating
-						AI-driven products for real-world industries.
-					</p>
-					<p className="font-bold border-y border-outline-variant/30 py-8">
-						Combined experience: 25+ years across AI, automation,
-						and multiple sectors.
-					</p>
-				</div>
-			</FadeUp>
+		<section
+			id="team"
+			className="flex flex-col justify-center py-10 overflow-hidden bg-foreground"
+		>
+			<div className="m-auto bg-secondary-foreground rounded-2xl p-4">
+				<motion.h2
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5, delay: 0.2 }}
+					className="flex w-full justify-center text-3xl md:text-5xl font-bold tracking-tight mb-10"
+				>
+					Meet the Team
+				</motion.h2>
+				<AnimatedTestimonials testimonials={team} autoplay />
+			</div>
 		</section>
 	);
-};
+}
 
-export default Team;
+export default AnimatedTeam;

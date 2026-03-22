@@ -1,76 +1,205 @@
-import { FadeUp, StaggerContainer, StaggerItem } from "../shared/Motion";
+"use client";
 
-const Industries = () => {
+import { Card, Carousel } from "@components/marketing/shared/cards-carousel";
+import Image from "next/image";
+import React from "react";
+
+function Industries() {
+	const cards = data.map((card, index) => (
+		<Card key={card.src} card={card} index={index} />
+	));
+
 	return (
-		<section
-			className="bg-secondary-foreground/80 py-24 px-8 overflow-hidden"
-			id="industries"
-		>
-			<div className="max-w-7xl mx-auto">
-				<FadeUp className="flex flex-col md:flex-row justify-between items-baseline gap-4 mb-16">
-					<h2 className="editorial-headline text-5xl text-foreground uppercase">
-						Industries We Enable
-					</h2>
-					<p className="font-approachable text-on-surface-variant max-w-md">
-						We build AI systems that automate workflows and unlock
-						new capabilities for entire industries.
-					</p>
-				</FadeUp>
-				<StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-px bg-outline-variant/20">
-					<StaggerItem className="bg-surface p-10 group hover:bg-accent transition-all duration-500 flex flex-col justify-between aspect-square items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20 text-primary group-hover:text-tertiary-fixed transition-colors">
-							<path d="M10.827 16.379a6.082 6.082 0 0 1-8.618-7.002l5.412 1.45a6.082 6.082 0 0 1 7.002-8.618l-1.45 5.412a6.082 6.082 0 0 1 8.618 7.002l-5.412-1.45a6.082 6.082 0 0 1-7.002 8.618l1.45-5.412Z"/>
-							<circle cx="12" cy="12" r="2"/>
-						</svg>
-						<h3 className="font-black font-industrial text-2xl uppercase group-hover:text-primary-foreground transition-colors">
-							HVAC
-						</h3>
-					</StaggerItem>
-					<StaggerItem className="bg-surface p-10 group hover:bg-accent transition-all duration-500 flex flex-col justify-between aspect-square items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20 text-primary group-hover:text-tertiary-fixed transition-colors">
-							<path d="m14 13-7.5 7.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L11 10"/>
-							<path d="m16 16 6-6"/>
-							<path d="m8 8 6-6"/>
-							<path d="m9 7 8 8"/>
-							<path d="m21 11-8-8"/>
-						</svg>
-						<h3 className="font-black font-industrial text-2xl uppercase group-hover:text-primary-foreground transition-colors">
-							Legal
-						</h3>
-					</StaggerItem>
-					<StaggerItem className="bg-surface p-10 group hover:bg-accent transition-all duration-500 flex flex-col justify-between aspect-square items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20 text-primary group-hover:text-tertiary-fixed transition-colors">
-							<rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-							<path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-							<path d="M9 14h6"/>
-							<path d="M12 11v6"/>
-						</svg>
-						<h3 className="font-black font-industrial text-2xl uppercase group-hover:text-primary-foreground transition-colors">
-							Healthcare
-						</h3>
-					</StaggerItem>
-					<StaggerItem className="bg-surface p-10 group hover:bg-accent transition-all duration-500 flex flex-col justify-between aspect-square items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20 text-primary group-hover:text-tertiary-fixed transition-colors">
-							<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-							<polyline points="9 22 9 12 15 12 15 22"/>
-						</svg>
-						<h3 className="font-black font-industrial text-2xl uppercase group-hover:text-primary-foreground transition-colors">
-							Real Estate
-						</h3>
-					</StaggerItem>
-					<StaggerItem className="bg-surface p-10 group hover:bg-accent transition-all duration-500 flex flex-col justify-between aspect-square items-center">
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-20 h-20 text-primary group-hover:text-tertiary-fixed transition-colors">
-							<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-							<path d="M12 16s-3.5-2.5-3.5-4.5A2.5 2.5 0 0 1 11 9c.4 0 .8.1 1 .3.2-.2.6-.3 1-.3a2.5 2.5 0 0 1 2.5 2.5c0 2-3.5 4.5-3.5 4.5z" fill="currentColor"/>
-						</svg>
-						<h3 className="font-black font-industrial text-2xl uppercase group-hover:text-primary-foreground transition-colors">
-							Insurance
-						</h3>
-					</StaggerItem>
-				</StaggerContainer>
-			</div>
-		</section>
+		<div className="w-full h-full py-20 bg-foreground">
+			<h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-secondary-foreground">
+				Get to know our Domain Experties.
+			</h2>
+			<Carousel items={cards} />
+		</div>
+	);
+}
+
+const IndustryContent = ({
+	features,
+}: {
+	features: { highlight: string; description: string; image: string }[];
+}) => {
+	return (
+		<>
+			{features.map((feature, index) => {
+				return (
+					<div
+						key={"industry-feature-" + index}
+						className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+					>
+						<p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto mb-8">
+							<span className="font-bold text-neutral-700 dark:text-neutral-200">
+								{feature.highlight}
+							</span>{" "}
+							{feature.description}
+						</p>
+						<div className="relative w-full h-64 md:h-96 rounded-xl overflow-hidden shadow-lg mt-8">
+							<Image
+								src={feature.image}
+								alt={feature.highlight}
+								fill
+								className="object-cover"
+							/>
+						</div>
+					</div>
+				);
+			})}
+		</>
 	);
 };
+
+const data = [
+	{
+		category: "HVAC",
+		title: "Optimize scheduling and dispatching with intelligent systems.",
+		src: "/images/HVAC.jpg",
+		content: (
+			<IndustryContent
+				features={[
+					{
+						highlight: "AI-powered route optimization.",
+						description:
+							"Reduce travel time and fuel costs by dynamically routing technicians based on traffic, priority, and parts availability.",
+						image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Predictive maintenance.",
+						description:
+							"Analyze sensor data to predict system failures before they occur, scheduling proactive service calls and minimizing downtime.",
+						image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Automated inventory tracking.",
+						description:
+							"Generate invoices instantly upon job completion and keep real-time tabs on truck stock and warehouse inventory.",
+						image: "https://images.unsplash.com/photo-1586528116311-ad8ed7c663b0?q=80&w=800&auto=format&fit=crop",
+					},
+				]}
+			/>
+		),
+	},
+	{
+		category: "Legal",
+		title: "Streamline contract review and legal research with AI.",
+		src: "/images/Legal.jpg",
+		content: (
+			<IndustryContent
+				features={[
+					{
+						highlight: "Intelligent contract analysis.",
+						description:
+							"Automatically extract key terms, obligations, and anomalies from lengthy contracts in seconds to speed up the review process.",
+						image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Case outcome prediction.",
+						description:
+							"Leverage historical case data to evaluate risks, predict potential outcomes, and advise clients with data-backed confidence.",
+						image: "https://images.unsplash.com/photo-1505664115456-62021fb4a621?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Automated legal drafting.",
+						description:
+							"Generate preliminary drafts for standard legal documents, motions, and briefs, freeing up billable hours for strategic thinking.",
+						image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?q=80&w=800&auto=format&fit=crop",
+					},
+				]}
+			/>
+		),
+	},
+	{
+		category: "Healthcare",
+		title: "Improve patient outcomes with predictive analytics and automation.",
+		src: "/images/Healthcare.jpg",
+		content: (
+			<IndustryContent
+				features={[
+					{
+						highlight: "Predictive patient analytics.",
+						description:
+							"Identify at-risk patients early by analyzing historical medical records and real-time vitals, enabling proactive interventions.",
+						image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Streamlined administrative workflows.",
+						description:
+							"Automate appointment scheduling, medical billing, and insurance verifications to reduce staff burnout and errors.",
+						image: "https://images.unsplash.com/photo-1551076805-e1869043e560?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Personalized treatment plans.",
+						description:
+							"Assist physicians by surfacing relevant medical research and suggesting tailored treatment options based on patient history.",
+						image: "https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?q=80&w=800&auto=format&fit=crop",
+					},
+				]}
+			/>
+		),
+	},
+
+	{
+		category: "Real Estate",
+		title: "Accelerate property management and closing workflows.",
+		src: "/images/RealEstate.jpg",
+		content: (
+			<IndustryContent
+				features={[
+					{
+						highlight: "Automated property valuations.",
+						description:
+							"Instantly generate accurate property estimates using real-time market trends, neighborhood comps, and historical data.",
+						image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Smart document processing.",
+						description:
+							"Extract data from lease agreements, mortgage documents, and inspection reports automatically to accelerate closing times.",
+						image: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Virtual staging and touring.",
+						description:
+							"Enhance property listings with AI-generated virtual staging, allowing potential buyers to visualize spaces effortlessly.",
+						image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop",
+					},
+				]}
+			/>
+		),
+	},
+	{
+		category: "Insurance",
+		title: "Automate claims processing and risk assessment.",
+		src: "/images/Insurance.jpg",
+		content: (
+			<IndustryContent
+				features={[
+					{
+						highlight: "Accelerated claims processing.",
+						description:
+							"Use computer vision to analyze damage photos and instantly estimate repair costs, speeding up payouts and customer satisfaction.",
+						image: "https://images.unsplash.com/photo-1562240020-ce31ccb0fa7d?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Fraud detection algorithms.",
+						description:
+							"Detect suspicious patterns and anomalies in claims data in real time, preventing fraudulent payouts before they happen.",
+						image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+					},
+					{
+						highlight: "Dynamic risk assessment.",
+						description:
+							"Tailor insurance policies and premiums to individual profiles by analyzing vast amounts of behavioral and historical data.",
+						image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop",
+					},
+				]}
+			/>
+		),
+	},
+];
 
 export default Industries;
