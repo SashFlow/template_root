@@ -18,7 +18,7 @@ function Industries() {
 	));
 
 	return (
-		<div className="w-full h-full py-20 bg-foreground">
+		<div id="industries" className="w-full h-full py-20 bg-foreground">
 			<h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-secondary-foreground">
 				Get to know our Domain Experties.
 			</h2>

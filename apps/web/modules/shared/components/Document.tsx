@@ -21,7 +21,7 @@ export async function Document({
 		>
 			<body
 				className={cn(
-					"min-h-screen bg-background text-foreground antialiased",
+					"min-h-screen bg-foreground text-foreground antialiased",
 				)}
 			>
 				<NuqsAdapter>

@@ -51,7 +51,7 @@ export function Hero() {
 								Get in Touch
 							</Link>
 							<Link
-								href="#features"
+								href="#industries"
 								className="bg-surface-container-highest text-secondary-foreground px-8 py-4 font-approachable font-bold uppercase text-sm tracking-widest hover:bg-surface-variant transition-all inline-block text-center"
 							>
 								See What We Build

@@ -22,9 +22,7 @@ export function ClientProviders({ children }: PropsWithChildren) {
 				<ThemeProvider
 					attribute="class"
 					disableTransitionOnChange
-					enableSystem
 					defaultTheme={config.ui.defaultTheme}
-					themes={config.ui.enabledThemes}
 				>
 					<ApiClientProvider>
 						{children}
