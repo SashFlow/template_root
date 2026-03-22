@@ -71,7 +71,7 @@ export function Features() {
 	return (
 		<section
 			id="features"
-			className="py-32 px-8 bg-foreground overflow-hidden"
+			className="py-32 px-8 bg-background overflow-hidden"
 		>
 			<div
 				ref={containerRef}

@@ -18,7 +18,7 @@ const Process = () => {
 	}, [activeStep]);
 
 	return (
-		<section className="bg-foreground">
+		<section className="bg-background">
 			<div className="bg-linear-to-b from-foreground via-accent to-foreground py-32 px-8 text-accent-foreground overflow-hidden rounded-3xl">
 				<div className="max-w-7xl mx-auto">
 					<FadeUp className="mb-20">
