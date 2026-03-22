@@ -20,6 +20,11 @@ export const AnimatedTestimonials = ({
 	autoplay?: boolean;
 }) => {
 	const [active, setActive] = useState(0);
+	const [isMounted, setIsMounted] = useState(false);
+
+	useEffect(() => {
+		setIsMounted(true);
+	}, []);
 
 	const handleNext = () => {
 		setActive((prev) => (prev + 1) % testimonials.length);
@@ -43,7 +48,7 @@ export const AnimatedTestimonials = ({
 	}, [autoplay]);
 
 	const randomRotateY = () => {
-		return Math.floor(Math.random() * 21) - 10;
+		return isMounted ? Math.floor(Math.random() * 21) - 10 : 0;
 	};
 	return (
 		<div className="mx-auto max-w-sm px-4 py-20 font-sans antialiased md:max-w-4xl md:px-8 lg:px-12">
