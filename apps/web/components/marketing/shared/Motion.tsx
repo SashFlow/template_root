@@ -1,13 +1,13 @@
 "use client";
 
 import type { HTMLMotionProps } from "framer-motion";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { forwardRef } from "react";
 
 export const FadeUp = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
 	({ children, className, ...props }, ref) => {
 		return (
-			<motion.div
+			<m.div
 				ref={ref}
 				initial={{ opacity: 0, y: 30 }}
 				whileInView={{ opacity: 1, y: 0 }}
@@ -17,7 +17,7 @@ export const FadeUp = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
 				{...props}
 			>
 				{children}
-			</motion.div>
+			</m.div>
 		);
 	},
 );
@@ -27,7 +27,7 @@ FadeUp.displayName = "FadeUp";
 export const FadeIn = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
 	({ children, className, ...props }, ref) => {
 		return (
-			<motion.div
+			<m.div
 				ref={ref}
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
@@ -37,7 +37,7 @@ export const FadeIn = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
 				{...props}
 			>
 				{children}
-			</motion.div>
+			</m.div>
 		);
 	},
 );
@@ -49,7 +49,7 @@ export const StaggerContainer = forwardRef<
 	HTMLMotionProps<"div">
 >(({ children, className, ...props }, ref) => {
 	return (
-		<motion.div
+		<m.div
 			ref={ref}
 			initial="hidden"
 			whileInView="visible"
@@ -66,7 +66,7 @@ export const StaggerContainer = forwardRef<
 			{...props}
 		>
 			{children}
-		</motion.div>
+		</m.div>
 	);
 });
 
@@ -75,7 +75,7 @@ StaggerContainer.displayName = "StaggerContainer";
 export const StaggerItem = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
 	({ children, className, ...props }, ref) => {
 		return (
-			<motion.div
+			<m.div
 				ref={ref}
 				variants={{
 					hidden: { opacity: 0, y: 30 },
@@ -89,7 +89,7 @@ export const StaggerItem = forwardRef<HTMLDivElement, HTMLMotionProps<"div">>(
 				{...props}
 			>
 				{children}
-			</motion.div>
+			</m.div>
 		);
 	},
 );

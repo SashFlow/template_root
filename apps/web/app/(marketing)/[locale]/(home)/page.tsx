@@ -1,9 +1,15 @@
-import { Features } from "@components/marketing/home/Features";
 import { Hero } from "@components/marketing/home/Hero";
-import Industries from "@components/marketing/home/Industries";
-import Process from "@components/marketing/home/Process";
-import Team from "@components/marketing/home/Team";
+import dynamic from "next/dynamic";
 import { setRequestLocale } from "next-intl/server";
+
+const Features = dynamic(() =>
+	import("@components/marketing/home/Features").then((mod) => mod.Features),
+);
+const Industries = dynamic(
+	() => import("@components/marketing/home/Industries"),
+);
+const Process = dynamic(() => import("@components/marketing/home/Process"));
+const Team = dynamic(() => import("@components/marketing/home/Team"));
 
 export default async function Home({
 	params,

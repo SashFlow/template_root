@@ -1,18 +1,31 @@
 "use client";
 
-import Lenis from "lenis";
 import { type PropsWithChildren, useEffect } from "react";
 
 export function SmoothScroll({ children }: PropsWithChildren) {
 	useEffect(() => {
-		const lenis = new Lenis();
+		let lenisInstance: any;
+		let rafId: number;
 
-		function raf(time: number) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
+		import("lenis").then(({ default: Lenis }) => {
+			lenisInstance = new Lenis();
 
-		requestAnimationFrame(raf);
+			function raf(time: number) {
+				lenisInstance.raf(time);
+				rafId = requestAnimationFrame(raf);
+			}
+
+			rafId = requestAnimationFrame(raf);
+		});
+
+		return () => {
+			if (lenisInstance) {
+				lenisInstance.destroy();
+			}
+			if (rafId) {
+				cancelAnimationFrame(rafId);
+			}
+		};
 	}, []);
 	return <>{children}</>;
 }

@@ -11,82 +11,82 @@ export const poppins = Poppins({
 export const headingFont = localFont({
 	src: [
 		{
-			path: "../public/fonts/HelveticaNeueUltraLight.otf",
+			path: "../public/fonts/HelveticaNeue-UltraLight.woff2",
 			weight: "100",
 			style: "normal",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueUltraLightItalic.otf",
+			path: "../public/fonts/HelveticaNeue-UltraLightItalic.woff2",
 			weight: "100",
 			style: "italic",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueThin.otf",
+			path: "../public/fonts/HelveticaNeue-Thin.woff2",
 			weight: "200",
 			style: "normal",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueThinItalic.otf",
+			path: "../public/fonts/HelveticaNeue-ThinItalic.woff2",
 			weight: "200",
 			style: "italic",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueLight.otf",
+			path: "../public/fonts/HelveticaNeue-Light.woff2",
 			weight: "300",
 			style: "normal",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueLightItalic.otf",
+			path: "../public/fonts/HelveticaNeue-LightItalic.woff2",
 			weight: "300",
 			style: "italic",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueRoman.otf",
+			path: "../public/fonts/HelveticaNeue-Roman.woff2",
 			weight: "400",
 			style: "normal",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueItalic.ttf",
+			path: "../public/fonts/HelveticaNeue-Italic.woff2",
 			weight: "400",
 			style: "italic",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueMedium.otf",
+			path: "../public/fonts/HelveticaNeue-Medium.woff2",
 			weight: "500",
 			style: "normal",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueMediumItalic.otf",
+			path: "../public/fonts/HelveticaNeue-MediumItalic.woff2",
 			weight: "500",
 			style: "italic",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueBold.otf",
+			path: "../public/fonts/HelveticaNeue-Bold.woff2",
 			weight: "700",
 			style: "normal",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueBoldItalic.otf",
+			path: "../public/fonts/HelveticaNeue-BoldItalic.woff2",
 			weight: "700",
 			style: "italic",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueHeavy.otf",
+			path: "../public/fonts/HelveticaNeue-Heavy.woff2",
 			weight: "800",
 			style: "normal",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueHeavyItalic.otf",
+			path: "../public/fonts/HelveticaNeue-HeavyItalic.woff2",
 			weight: "800",
 			style: "italic",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueBlack.otf",
+			path: "../public/fonts/HelveticaNeue-Black.woff2",
 			weight: "900",
 			style: "normal",
 		},
 		{
-			path: "../public/fonts/HelveticaNeueBlackItalic.otf",
+			path: "../public/fonts/HelveticaNeue-BlackItalic.woff2",
 			weight: "900",
 			style: "italic",
 		},

@@ -20,6 +20,7 @@ export default function Index({
 			<Image
 				src={`/images/${src}`}
 				fill={true}
+				sizes="(max-width: 1024px) 0vw, 500px"
 				alt="image"
 				className="object-cover"
 			/>
