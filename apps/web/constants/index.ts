@@ -102,12 +102,12 @@ export const teamMembers = [
 		designation: "Co-Founder & CPO",
 		src: "/images/sandip.jpeg",
 	},
-	{
-		quote: "We ensure our AI implementations deliver measurable financial growth and operational efficiency, providing a clear path to sustainable scaling.",
-		name: "Shipra Goyal",
-		designation: "Co-Founder & CFO",
-		src: "/images/shipra.jpeg",
-	},
+	// {
+	// 	quote: "We ensure our AI implementations deliver measurable financial growth and operational efficiency, providing a clear path to sustainable scaling.",
+	// 	name: "Shipra Goyal",
+	// 	designation: "Co-Founder & CFO",
+	// 	src: "/images/shipra.jpeg",
+	// },
 	{
 		quote: "Strategic automation allows businesses to optimize their capital and focus on high-impact goals, while we handle the complexity of the AI backbone.",
 		name: "Sahil",
